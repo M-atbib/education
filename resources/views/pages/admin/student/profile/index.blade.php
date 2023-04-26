@@ -6,5 +6,7 @@
 
 @section('content')
 
-<h1>student</h1>
+<div>
+   
+</div>
 @endsection
