@@ -1,0 +1,63 @@
+.bgmobileapp{
+    background-color: $sec-bg;
+    margin: 0px 0px 40px 0px;
+    padding: 20px 0;
+    @media (max-width: 792px) {
+        display: none;
+    }
+    .mobileapp{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media (max-width: 1211px) {
+            display: block;
+        }
+        .image{
+            img{
+                max-width: 800px;
+                @media (max-width: 1322px) {
+                    max-width: 400px;
+                    
+                }
+            }
+            @media (max-width: 1211px) {
+                display: none;
+                
+            }
+            
+        }
+        .infomobileapp{
+            
+          
+            h1{
+                font-size: 30px;
+                font-weight: bold;
+                color: $blue;
+                margin-bottom: 50px;
+                @media (max-width: 792px) {
+                    
+                    font-size: 40px;
+                    text-align: center;
+                }
+                span{
+                    color: $pink;
+                }
+            }
+            .link{
+                display: flex;
+                img{
+                    display: block;
+                    max-width: 200px !important;
+                    margin-left: 10px;
+                    border-radius: 10px;
+                    @media (max-width: 792px) {
+                        
+                        max-width: 150px !important;
+                        margin-bottom: 15px;
+                    }
+                }
+            }
+            
+        }
+    }
+}

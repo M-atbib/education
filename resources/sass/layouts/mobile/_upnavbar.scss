@@ -1,0 +1,21 @@
+.upnavbar{
+    background-color: $sec-bg;
+    padding: 10px;
+    .container-sm{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        .lang{
+            a{
+                color: black;
+                border: 1px solid black;
+                padding: 5px;
+                border-radius: 5px;
+                i{
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+    
+}

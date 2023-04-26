@@ -1,0 +1,117 @@
+.footer{
+    // @media (max-width: 792px) {
+    //    background-color: $sec-bg;
+    // }
+    background-color: $sec-bg;
+    padding-top: 20px;
+    .footercontent{
+        .link{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid $blue;
+
+            .logo{
+                img{
+                    max-width: 80px;
+                }
+                margin-bottom: 10px;
+            }
+            .contact{
+                font-size: 35px;
+                margin-bottom: 10px;
+                a{
+                    color: $blue;
+                    i{
+                        border-radius: 50%;
+                    }
+                    &:hover{
+                        color: #1167a5;
+                    }
+                }
+            }
+        }
+        .info{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 20px;
+            border-bottom: 1px solid $blue;
+            .suuport{
+                h2{
+                    font-size: 19px;
+                    font-weight: bold;
+                    color: $blue;
+                }
+                .flex{
+                    display: flex;
+                    div{
+                        margin-right: 10px;
+                        a{
+                            display: block;
+                            margin: 5px 0px;
+                            color: #636363;
+                            text-decoration: none;
+                            &:hover{
+                                color: #252525;
+                            }
+                        }
+                    }
+                }
+            }
+            .application{
+                a{
+                    display: block;
+                    margin: 10px 0;
+                    img{
+                        max-width: 150px;
+                        border-radius: 10px;
+                        
+                    }
+                }
+                
+            }
+            @media (max-width: 792px) {
+                display: none;
+               }
+        }
+        .copywriting{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 30px;
+            margin-top: 10px;
+            font-size: 15px;
+            @media (max-width: 792px) {
+                display: block;
+                text-align: center;
+                margin-bottom: 0px;
+               }
+            .copywritinginfo{
+                i{
+                    margin-right: 5px;
+                }
+                color: $blue;
+                font-weight: bold;
+                span{
+                    color: #636363;
+                    font-weight: 500;
+                }
+            }
+            .securise{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                p{
+                    vertical-align: middle;
+                    margin-top: 18px;
+                }
+                img{
+                    max-width: 90px;
+                    
+                }
+            }
+
+        }
+    }
+}

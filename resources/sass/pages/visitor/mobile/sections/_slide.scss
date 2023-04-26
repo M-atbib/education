@@ -1,0 +1,19 @@
+@media (max-width: 1075px) {
+    .silder{
+            display: block;
+            justify-content: center;
+            align-items: center;
+            .info{
+                margin-top: 20px;
+                text-align: center;
+              
+                    .decription{
+                        width: 100%;
+                        padding-right: 15px;
+                    }
+            }
+            .image{
+                display: none;
+            }
+}
+}

@@ -1,0 +1,96 @@
+.certificate{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px 0;
+    @media (max-width: 1211px) {
+        display: block;
+    }
+    .image{
+        img{
+            max-width: 500px;
+            
+        }
+        @media (max-width: 1211px) {
+            display: none;
+            
+        }
+    }
+    .infocertificate{
+        margin-left: 30px;
+       
+        h1{
+            font-size: 40px;
+           
+            font-weight: bold;
+            color: $blue;
+            margin-bottom: 50px;
+            @media (max-width: 792px) {
+                
+                font-size: 20px;
+                width: 300px;
+                text-align: center;
+            }
+            @media (max-width: 360px) {
+                
+                font-size: 20px;
+                width: 250px;
+                text-align: center;
+            }
+        }
+        ul{
+            list-style: none;
+            font-size: 25px;
+            @media (max-width: 792px) {
+                
+                font-size: 20px;
+              
+            }
+            @media (max-width: 360px) {
+                
+                font-size: 15px;
+                margin-left: -20px;
+            }
+            li{
+                margin: 10px 0;
+                color: #5F6C7B;
+                i{
+                    font-size: 20px;
+                    margin-right: 5px;
+                    color: #A5EB78;
+                }
+            }
+        }
+        img{
+            display: block;
+            max-width: 200px !important;
+            margin-left: 70px;
+            margin-bottom: 10px;
+            @media (max-width: 792px) {
+                
+                max-width: 150px !important;
+                margin-bottom: 15px;
+            }
+        }
+        .link{
+            width: 100%;
+            text-align: center;
+            margin-top: 30px;
+            a{
+                
+                background-color: $sec_blue;
+                padding: auto;
+                font-size: 18px;
+                font-weight: 600;
+                color: white;
+                text-decoration: none;
+                padding: 7px 100px;
+                
+                border-radius: 10px;
+                &:hover{
+                    background-color: #266ea5;
+                }
+            }
+        }
+    }
+}

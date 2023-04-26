@@ -1,0 +1,122 @@
+.navbar_mobile{    
+    background-color: $sec-bg; 
+    width: 100%;
+   
+    .navbar{
+        @media (min-width: 768px) {
+            display: none;
+        }
+        .logo{
+            margin-right: 25px;
+            img{
+                max-width: 50px;
+            }
+        }
+        .navbar-brand{
+            margin-left: 25px;
+            i{
+                color: $blue;
+                margin: 0px 5px;
+            }
+        }
+        #heart{
+            text-align: center;
+            position: relative;
+            i{
+                display: block;
+              
+                color: $blue;
+                &:hover{
+                    font-weight: 600;
+                }
+            }
+            span{
+                position: absolute;
+                top: -7px;
+                left: -6px;
+                font-size: 9px;
+            }
+        }
+        .navbar-collapse{
+            padding: 10px;
+            .user{
+                margin: 10px 0px;
+                display: flex;
+
+                nav{
+                    img{
+                        width: 50px;
+                    }
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        font-size: 16px;
+                        margin: 0px 5px;
+                        color: $blue;
+                        font-weight: bold;
+                       
+                        &:hover{
+                            color: black;
+                        }
+
+                        &:last-child
+                        {
+                            display: block;
+                            text-decoration: none;
+                            font-size: 15px;
+                           font-weight: 400;
+                            color: $sec_blue;
+                        }
+                    }
+
+                }
+            }
+            .loginmobile{
+                margin-bottom: 20px;
+                a{
+                    display: block;
+                    text-decoration: none;
+                    font-size: 16px;
+                    margin: 5px 0px;
+                    color: $sec_blue;
+                    font-weight: bold;
+                   
+                    &:hover{
+                        color: black;
+                    }
+                }
+            }
+            .solution{
+                a{
+                    display: block;
+                    text-decoration: none;
+                    font-size: 16px;
+                    margin: 5px 0px;
+                    color: $blue;
+                }
+                &:hover{
+                    color: black;
+                }
+            }
+            .suuport{
+                margin-top: 20px;
+                h2{
+                    color: $blue;
+                    font-size: 25px;
+                    font-weight: 600;
+                }
+                a{
+                    display: block;
+                    text-decoration: none;
+                    font-size: 16px;
+                    margin: 5px 0px;
+                    color: $blue;
+                }
+                &:hover{
+                    color: black;
+                }
+            }
+        }
+    }
+
+}

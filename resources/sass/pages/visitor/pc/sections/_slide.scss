@@ -1,0 +1,50 @@
+.silder{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .info{
+        margin-top: 20px;
+        .title{
+            color: $blue;
+            font-size: 45px;
+            .education{
+                font-weight: 200;
+                margin-bottom: -25px;
+            }
+            .online{
+                font-weight: bold;
+            }
+            .academy{
+                font-size: 18px;
+            }
+            span{
+                display: block;
+                margin-top: -10px;
+            }
+        }
+        .decription{
+            margin-top: 30px;
+            font-size: 15px;
+            color: $gray;
+            width: 500px;
+        }
+        .start{
+            margin-top: 50px;
+            a{
+                background-color: $sec_blue;
+                color: white;
+                text-decoration: none;
+                border-radius: 10px;
+                padding: 7px 54px;
+
+                &:hover{
+                    background-color: #0074cc;
+                }
+            }
+        }
+    }
+   .image{
+    margin: 20px 10px 10px 10px;
+   }
+    
+}

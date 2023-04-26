@@ -1,0 +1,61 @@
+.sidebar{
+   
+    background-color: $sec-bg;
+    // width: 300px;
+    // height: 100%;
+    // margin-top: 94px;
+    width: 20%;
+    position: fixed;
+    top: 149px;
+    left: 0;
+    height: 100%;
+
+    @media (max-width: 767px)  {
+        top: 100px;
+      
+    }
+    @media (max-width: 893px)  {
+       width: 30%;
+    }
+    ul{
+        margin-top: 20px;
+        list-style: none;
+        padding: 0px;
+        // padding: 5px 5px 0px 5px;
+        // max-height: 500px;
+        // margin: 0px;
+        // overflow: auto;
+        // color: white;
+        // &::-webkit-scrollbar-track {
+         
+        //     background-color: transparent;
+        // }
+    
+        // &::-webkit-scrollbar {
+        //     width: 4px;
+        //     background-color: transparent;
+        // }
+    
+        // &::-webkit-scrollbar-thumb {
+            
+        //     background-color: transparent;
+        // }
+            a{
+                display: block;
+                padding: 10px;
+                font-size: 20px;
+                font-weight: 300;
+                text-decoration: none;
+                color: $blue;
+                width: 100%;
+
+                &:hover{
+                    background-color: #cde4ff;
+                }
+            }
+            .active{
+                background-color: #cde4ff;
+            }
+        
+    }
+}

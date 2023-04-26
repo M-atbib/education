@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+@import './app';
+
+@import './layouts/pc/layouts';
+@import './layouts/mobile/layouts';
+
+@import './pages/visitor/pc/visitor';
+@import './pages/visitor/mobile/visitormobile';
+
+
+@import './pages/admin/admin';
+
+
+@import './auth/auth.scss';
