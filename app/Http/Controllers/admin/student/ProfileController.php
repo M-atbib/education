@@ -25,9 +25,4 @@ class ProfileController extends Controller
     {
         return view('pages.admin.student.profile.index');
     }
-
-    public function test()
-    {
-        return view('pages.admin.student.profile.test');
-    }
 }

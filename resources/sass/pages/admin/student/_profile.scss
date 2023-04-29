@@ -1,0 +1,111 @@
+.profile {
+    position: relative;
+    @include flex(column, center, center, 25px);
+    width: 90%;
+    margin: 50px auto;
+    padding: 30px;
+    background: $body-bg;
+    border-radius: 20px;
+
+    &_titles {
+        @include flex(row, center, center, 100px);
+
+        h3 {
+            border-bottom: 1px solid $light-gray;
+            padding-bottom: 10px;
+            color: $light-gray;
+            margin: 0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .active_title {
+            color: $blue;
+            border-color: $blue;
+        }
+    }
+
+    &_main {
+        @include flex(row, center, flex-start, 0);
+        width: 100%;
+
+        &-pic {
+            width: 25%;
+            border-right: 2px solid $sec-bg;
+            @include flex(column, center, center, 20px);
+
+            &_img {
+                position: relative;
+                img {
+                    width: 175px;
+                }
+                .fa-solid {
+                    position: absolute;
+                    top: 78%;
+                    left: 85%;
+                }
+            }
+
+            p {
+                color: $gray;
+                font-weight: 500;
+                font-size: 18px;
+            }
+        }
+
+        &-edit {
+            position: relative;
+            width: 80%;
+            margin: 30px;
+            @include flex(column, flex-start, flex-start, 30px);
+
+            &_profil {
+                @include flex(row, flex-start, center, 15px);
+                flex-wrap: wrap;
+
+                input {
+                    width: 363px;
+                    padding: 13px;
+                    border: 1px solid $light-gray;
+                    border-radius: 10px;
+                }
+
+                input[type="address"] {
+                    width: 100%;
+                }
+            }
+
+            .hide {
+                @include hideContent;
+            }
+
+            &_password {
+                @include hideContent;
+            }
+
+            .open {
+                width: 100%;
+                @include flex(column, center, center, 20px);
+                input {
+                    width: 100%;
+                    padding: 13px;
+                    border: 1px solid $light-gray;
+                    border-radius: 10px;
+                }
+            }
+
+            button {
+                width: 300px;
+                margin-top: 10px;
+                padding: 12px;
+                border: none;
+                border-radius: 10px;
+                background-color: $pink;
+                color: $body-bg;
+                font-size: 22px;
+                font-weight: 500;
+                letter-spacing: 0.03em;
+            }
+        }
+    }
+}

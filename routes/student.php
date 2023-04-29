@@ -40,7 +40,6 @@ Route::group(
         
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [ProfileController::class, 'index'])->name('student.index');
-            Route::get('/test', [ProfileController::class, 'test'])->name('student.test');
         });
 
 

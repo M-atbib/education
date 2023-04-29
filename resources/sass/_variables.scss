@@ -1,15 +1,50 @@
 // Body
 $body-bg: white;
-$sec-bg: #D8EEFE;
+$sec-bg: #d8eefe;
 $blue: #094067;
-$sec_blue: #3DA9FC;
-$gray: #5F6C7B;
-$pink:#EF4565;
+$sec_blue: #3da9fc;
+$gray: #5f6c7b;
+$light-gray: #949494;
+$pink: #ef4565;
 $yellow: gold;
 
-
-
 // Typography
-$font-family-sans-serif: 'Inter', sans-serif;
+$font-family-sans-serif: "Inter", sans-serif;
 $font-size-base: 0.9rem;
 $line-height-base: 1.6;
+
+//FlexBox
+@mixin flex($direction, $justify, $align, $gap) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+@mixin hideContent() {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 0;
+    visibility: hidden;
+}
+
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
+@mixin media-lg {
+    @media screen and (min-width: 1024px) {
+        @content;
+    }
+}
+
+@mixin media-xl {
+    @media screen and (min-width: 1600px) {
+        @content;
+    }
+}

@@ -1,5 +1,4 @@
-.sidebar{
-   
+.sidebar {
     background-color: $sec-bg;
     // width: 300px;
     // height: 100%;
@@ -10,14 +9,13 @@
     left: 0;
     height: 100%;
 
-    @media (max-width: 767px)  {
+    @media (max-width: 767px) {
         top: 100px;
-      
     }
-    @media (max-width: 893px)  {
-       width: 30%;
+    @media (max-width: 893px) {
+        width: 30%;
     }
-    ul{
+    ul {
         margin-top: 20px;
         list-style: none;
         padding: 0px;
@@ -27,35 +25,34 @@
         // overflow: auto;
         // color: white;
         // &::-webkit-scrollbar-track {
-         
+
         //     background-color: transparent;
         // }
-    
+
         // &::-webkit-scrollbar {
         //     width: 4px;
         //     background-color: transparent;
         // }
-    
+
         // &::-webkit-scrollbar-thumb {
-            
+
         //     background-color: transparent;
         // }
-            a{
-                display: block;
-                padding: 10px;
-                font-size: 20px;
-                font-weight: 300;
-                text-decoration: none;
-                color: $blue;
-                width: 100%;
+        a {
+            display: block;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: none;
+            color: $blue;
+            width: 100%;
 
-                &:hover{
-                    background-color: #cde4ff;
-                }
-            }
-            .active{
+            &:hover {
                 background-color: #cde4ff;
             }
-        
+        }
+        .active {
+            background-color: #cde4ff;
+        }
     }
 }
