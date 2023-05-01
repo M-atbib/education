@@ -1,0 +1,76 @@
+@include media-lg {
+    .profile {
+        width: 90%;
+        margin: 50px auto;
+        
+        &_edit{
+            &-profil{
+                input{
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+            button{
+                width: 40%;
+            }
+        }
+    }
+}
+
+@include media-xl {
+    .profile {
+        flex-direction: row;
+        gap: 50px;
+        width: 90%;
+        padding: 40px;
+
+        &_pic {
+            width: 25%;
+            border-bottom: none;
+            border-right: 3px solid $sec-bg;
+
+            &-img {
+                width: 100%;
+            }
+        }
+
+        &_edit {
+            align-items: flex-start;
+            width: 100%;
+
+            &-titles {
+                margin-left: 100px;
+                gap: 100px;
+
+                h3 {
+                    font-size: 26px;
+                }
+            }
+
+            &-profil {
+                flex-direction: row;
+                flex-wrap: wrap;
+                width: 100%;
+                input {
+                    width: 48%;
+                }
+
+                input[type="address"] {
+                    width: 100%;
+                }
+            }
+
+            &-password{
+               align-items:flex-start;
+               input{
+                  width: 50ch;
+               }
+            }
+
+            button {
+                width: 30%;
+            }
+        }
+    }
+}
+

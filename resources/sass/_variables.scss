@@ -14,8 +14,8 @@ $font-size-base: 0.9rem;
 $line-height-base: 1.6;
 
 //FlexBox
-@mixin flex($direction, $justify, $align, $gap) {
-    display: flex;
+@mixin display($display, $direction, $justify, $align, $gap) {
+    display: $display;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
@@ -24,27 +24,31 @@ $line-height-base: 1.6;
 
 @mixin hideContent() {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 0;
     visibility: hidden;
+    
 }
 
-@mixin media-md {
-    @media screen and (min-width: 768px) {
+@mixin media-sm {
+    @media screen and (max-width: 768px) {
         @content;
     }
 }
 
 @mixin media-lg {
-    @media screen and (min-width: 1024px) {
+    @media screen and (min-width: 900px) {
         @content;
     }
 }
 
-@mixin media-xl {
-    @media screen and (min-width: 1600px) {
+@mixin media-xl{
+    @media screen and (min-width: 1280px){
         @content;
     }
 }
+
+@mixin media-2xl{
+    @media screen and (min-width: 1440px){
+        @content;
+    }
+}
+

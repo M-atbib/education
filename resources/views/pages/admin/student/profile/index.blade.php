@@ -5,64 +5,71 @@
 
 @section('javascript')
 <script language="javascript">
-   const profilTitle = document.getElementById("title_profile");
-   const passwordTitle = document.getElementById("title_password");
-   const profilEdit = document.getElementById("edit-profile");
-   const passwordEdit = document.getElementById("edit-password");
+   document.addEventListener("DOMContentLoaded", () => {
+      const profilTitle = document.getElementById("title_profile");
+      const passwordTitle = document.getElementById("title_password");
+      const profilEdit = document.getElementById("edit-profile");
+      const passwordEdit = document.getElementById("edit-password");
 
-   profilTitle.classList.add("active_title");
+      const profilePic = document.getElementById("profile_pic");
+      const icon = document.getElementById('icon');
+      const inputFile = document.getElementById('file');
 
-   function handleChange(value){
-      if(value == "password"){
-         console.log("hillo");
-         passwordTitle.classList.add("active_title");
-         profilEdit.classList.add("hide");
-         passwordEdit.classList.add("open");
-         profilTitle.classList.remove("active_title");
-         console.log(passwordTitle, profilEdit, passwordEdit, profilTitle)
-         
-      }else if(value == "profil"){
-         console.log("hi");
-         profilEdit.classList.add("active");
+      profilTitle.addEventListener('click', () => {
          passwordTitle.classList.remove("active_title");
-         passwordEdit.classList.remove("open");
-      }
-   }
+         profilTitle.classList.add("active_title");
+         passwordEdit.style.display = "none";
+         profilEdit.style.display = "flex";
+      });
+
+      passwordTitle.addEventListener('click', () => {
+         passwordTitle.classList.add("active_title");
+         profilTitle.classList.remove("active_title");
+         passwordEdit.style.display = "flex";
+         profilEdit.style.display = "none";
+         
+      });
+
+      icon.addEventListener("click", () => {
+         file.style.visibility = "visible";
+         profilePic.style.opacity="0";
+      })
+   })
 </script>
 @endsection
 
 @section('content')
 <div class="profile">
-   <div class="profile_titles">
-      <h3 id="title_profile" onclick="handleChange('profil')">Profil</h3>
-      <h3 id="title_password" onclick="handleChange('password')">Password</h3>
-   </div>
-   <div class="profile_main">
-      <div class="profile_main-pic">
-      <div class="profile_main-pic_img">
-         <img src="http://127.0.0.1:8000/uploads/student/zouhir.png" alt="profile"/>
-         <i class="fa-solid fa-pen-to-square"></i>
+      <div class="profile_pic">
+         <div class="profile_pic-img" id="profile_pic">
+            <img src="http://127.0.0.1:8000/uploads/student/zouhir.png"  alt="profile" />
+            <i class="fa-solid fa-pen-to-square" id="icon"></i>
+         </div>
+         <p>Student</p>
+         <input type="file" id="file"/>
       </div>
-      <p>Student</p>
-   </div>
    
-   <div class="profile_main-edit">
-      <div class="profile_main-edit_profil" id="edit-profile">
-         <input type="text" placeholder="Full name"/>
-         <input type="text" placeholder="City"/>
-         <input type="number" placeholder="Telephone"/>
-         <input type="email" placeholder="Email"/>
-         <input type="address" placeholder="Address"/>
-         <button type="submit">Update</button>
-      </div>
+      <div class="profile_edit">
+         <div class="profile_edit-titles">
+            <h3 class="active_title" id="title_profile">Profil</h3>
+            <h3 id="title_password">Password</h3>
+         </div>
+         <div class="profile_edit-profil" id="edit-profile">
+            <input type="text" placeholder="Full name"/>
+            <input type="text" placeholder="City"/>
+            <input type="number" placeholder="Telephone"/>
+            <input type="email" placeholder="Email"/>
+            <input type="address" placeholder="Address"/>
+            <button type="submit">Update</button>
+         </div>
 
-      <div class="profile_main-edit_password" id="edit-password">
-         <input type="password" placeholder="Old Password"/>
-         <input type="password" placeholder="New Password"/>
-         <button>Update</button>
+         <div class="profile_edit-password" id="edit-password">
+            <input type="password" placeholder="Old Password"/>
+            <input type="password" placeholder="New Password"/>
+            <button>Update</button>
+         </div>
       </div>
-   </div>
-   </div>
+   
 </div>
 @endsection
 
