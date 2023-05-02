@@ -21,6 +21,6 @@
     </a>
     <a href="#">
         <i class="fa-solid fa-calendar-check"></i>
-        Emploi de temps
+        Emploi du temps
     </a>
 </ul>

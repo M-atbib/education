@@ -30,10 +30,10 @@
          
       });
 
-      icon.addEventListener("click", () => {
-         file.style.visibility = "visible";
-         profilePic.style.opacity="0";
-      })
+      // icon.addEventListener("click", () => {
+      //    file.style.visibility = "visible";
+      //    profilePic.style.opacity="0";
+      // })
    })
 </script>
 @endsection
@@ -42,13 +42,13 @@
 <div class="profile">
       <div class="profile_pic">
          <div class="profile_pic-img" id="profile_pic">
-            <img src="http://127.0.0.1:8000/uploads/student/zouhir.png"  alt="profile" />
-            <i class="fa-solid fa-pen-to-square" id="icon"></i>
+            <label for="file"><img src="http://127.0.0.1:8000/uploads/student/man.png"  alt="profile" />
+           <i class="fa-solid fa-pen-to-square" id="icon"></i></label> 
          </div>
          <p>Student</p>
-         <input type="file" id="file"/>
+         <input type="file" hidden id="file"/>
       </div>
-   
+      
       <div class="profile_edit">
          <div class="profile_edit-titles">
             <h3 class="active_title" id="title_profile">Profil</h3>

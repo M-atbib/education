@@ -5,20 +5,25 @@
     padding: 20px;
     background: $body-bg;
     border-radius: 20px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 
     &_pic {
         width: 100%;
         border-bottom: 3px solid $sec-bg;
         @include display(flex, column, center, center, 20px);
         @include display(flex, column, center, center, 20px);
-
+        padding-right: 10px !important;
         &-img {
             width: 45%;
             position: relative;
             visibility: visible;
             img {
+                border-radius: 50%;
                 width: 100%;
+                cursor: pointer;
                 visibility: visible;
+                box-shadow: rgba(129, 129, 129, 0.2) 0px 2px 8px 0px;
+                
             }
             .fa-solid {
                 cursor: pointer;
@@ -73,6 +78,11 @@
                 padding: 13px;
                 border: 1px solid $light-gray;
                 border-radius: 10px;
+                
+                &:focus{
+                    outline: none;
+                }
+                
             }
         }
 
@@ -86,6 +96,9 @@
                 padding: 13px;
                 border: 1px solid $light-gray;
                 border-radius: 10px;
+                &:focus{
+                    outline: none;
+                }
             }
         }
 
