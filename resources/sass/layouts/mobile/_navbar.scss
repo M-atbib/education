@@ -2,11 +2,11 @@
 .navbar_mobile{    
     background-color: $sec-bg; 
     width: 100%;
-   
+   margin-top: 50px;
+   position: fixed;
+   z-index: 100;
     .navbar{
-        @media (min-width: 768px) {
-            display: none;
-        }
+        
         .logo{
             margin-right: 25px;
             img{
@@ -120,4 +120,10 @@
         }
     }
 
+}
+
+@include media-lg{
+    .navbar_mobile{
+        display: none;
+    }
 }
