@@ -2781,6 +2781,10 @@
 .sidebar_container-content ul a i {
   margin-right: 5px;
 }
+.sidebar_container .hide {
+  position: absolute;
+  visibility: hidden;
+}
 
 @media screen and (min-width: 900px) {
   .sidebar_container-dropdown {
