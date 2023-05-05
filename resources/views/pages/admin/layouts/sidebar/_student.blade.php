@@ -1,5 +1,5 @@
 <ul>
-    <a href=" #">
+    <a href="{{ route('apprentissage.index') }}">
         <i class="fa-solid fa-graduation-cap"></i>
         Apprentissage
     </a>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\admin\student\ApprentissageController;
 use App\Http\Controllers\testController;
 use App\Http\Controllers\visitor\AllformationController;
 use App\Http\Controllers\admin\student\DashboardController;
@@ -42,11 +43,12 @@ Route::group(
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [ProfileController::class, 'index'])->name('student.index');
         });
-    },
 
-    function () {
+
         Route::group(['prefix' => 'apprentissage'], function () {
-            Route::get('/', [ApprentissageController::class, 'index'])->name('student.index');
+            Route::get('/', [ApprentissageController::class, 'index'])->name('apprentissage.index');
         });
-    }
+
+    },
+        
 );

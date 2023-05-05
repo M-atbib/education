@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin\student;
 
 use App\Http\Controllers\Controller;
 
-class ProfileController extends Controller
+class ApprentissageController extends Controller
 {
     /**
      * Create a new controller instance.
