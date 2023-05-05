@@ -1,3 +1,13 @@
+@media screen and (min-width: 710px) {
+    .profile {
+        &_pic {
+            &-img {
+                width: 30% !important;
+            }
+        }
+    }
+}
+
 @include media-lg {
     .profile {
         width: 90%;

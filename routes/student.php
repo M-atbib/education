@@ -42,5 +42,11 @@ Route::group(
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [ProfileController::class, 'index'])->name('student.index');
         });
+    },
+
+    function () {
+        Route::group(['prefix' => 'apprentissage'], function () {
+            Route::get('/', [ApprentissageController::class, 'index'])->name('student.index');
+        });
     }
 );

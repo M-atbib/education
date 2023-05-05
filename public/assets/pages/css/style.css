@@ -2782,10 +2782,6 @@
 .sidebar_container-content ul a i {
   margin-right: 5px;
 }
-.sidebar_container .hide {
-  position: absolute;
-  visibility: hidden;
-}
 
 @media screen and (min-width: 900px) {
   .sidebar_container-dropdown {
@@ -3011,6 +3007,11 @@
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 710px) {
+  .profile_pic-img {
+    width: 30% !important;
+  }
+}
 @media screen and (min-width: 900px) {
   .profile {
     width: 90%;
