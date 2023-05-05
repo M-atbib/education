@@ -3006,6 +3006,11 @@
   letter-spacing: 0.03em;
 }
 
+@media screen and (min-width: 710px) {
+  .profile_pic-img {
+    width: 30% !important;
+  }
+}
 @media screen and (min-width: 900px) {
   .profile {
     width: 90%;
