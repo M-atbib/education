@@ -1,129 +1,125 @@
-
-.navbar_mobile{    
-    background-color: $sec-bg; 
+.navbar_mobile {
+    background-color: $sec-bg;
     width: 100%;
-   margin-top: 50px;
-   position: fixed;
-   z-index: 100;
-    .navbar{
-        
-        .logo{
+    margin-top: 50px;
+    position: fixed;
+    z-index: 10;
+    .navbar {
+        z-index: 10;
+        .logo {
             margin-right: 25px;
-            img{
+            img {
                 max-width: 50px;
             }
         }
-        .navbar-brand{
+        .navbar-brand {
             margin-left: 25px;
-            i{
+            i {
                 color: $blue;
                 margin: 0px 5px;
             }
         }
-        #heart{
+        #heart {
             text-align: center;
             position: relative;
-            i{
+            i {
                 display: block;
-              
+
                 color: $blue;
-                &:hover{
+                &:hover {
                     font-weight: 600;
                 }
             }
-            span{
+            span {
                 position: absolute;
                 top: -7px;
                 left: -6px;
                 font-size: 9px;
             }
         }
-        .navbar-collapse{
+        .navbar-collapse {
             padding: 10px;
-            .user{
+            .user {
                 margin: 10px 0px;
                 display: flex;
 
-                nav{
-                    img{
+                nav {
+                    img {
                         width: 50px;
                     }
-                    a{
+                    a {
                         display: block;
                         text-decoration: none;
                         font-size: 16px;
                         margin: 0px 5px;
                         color: $blue;
                         font-weight: bold;
-                       
-                        &:hover{
+
+                        &:hover {
                             color: black;
                         }
 
-                        &:last-child
-                        {
+                        &:last-child {
                             display: block;
                             text-decoration: none;
                             font-size: 15px;
-                           font-weight: 400;
+                            font-weight: 400;
                             color: $sec_blue;
                         }
                     }
-
                 }
             }
-            .loginmobile{
+            .loginmobile {
                 margin-bottom: 20px;
-                a{
+                a {
                     display: block;
                     text-decoration: none;
                     font-size: 16px;
                     margin: 5px 0px;
                     color: $sec_blue;
                     font-weight: bold;
-                   
-                    &:hover{
+
+                    &:hover {
                         color: black;
                     }
                 }
             }
-            .solution{
-                a{
+            .solution {
+                a {
                     display: block;
                     text-decoration: none;
                     font-size: 16px;
                     margin: 5px 0px;
                     color: $blue;
                 }
-                &:hover{
+                &:hover {
                     color: black;
                 }
             }
-            .suuport{
+            .suuport {
                 margin-top: 20px;
-                h2{
+                h2 {
                     color: $blue;
                     font-size: 25px;
                     font-weight: 600;
                 }
-                a{
+                a {
                     display: block;
                     text-decoration: none;
                     font-size: 16px;
                     margin: 5px 0px;
                     color: $blue;
                 }
-                &:hover{
+                &:hover {
                     color: black;
                 }
             }
         }
     }
-
 }
 
-@include media-lg{
-    .navbar_mobile{
+@include media-lg {
+    .navbar_mobile {
         display: none;
     }
 }

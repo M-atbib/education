@@ -33,17 +33,14 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 Route::group(
     [
-        'prefix' => LaravelLocalization::setLocale().'/admin/student',
-        'middleware' => [ 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath','auth','verified','student']
-    ], function(){
-        
-        
+        'prefix' => LaravelLocalization::setLocale() . '/admin/student',
+        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath', 'auth', 'verified', 'student']
+    ],
+    function () {
+
+
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [ProfileController::class, 'index'])->name('student.index');
         });
-
-
-});
-
-
-
+    }
+);

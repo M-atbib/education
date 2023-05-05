@@ -1,11 +1,12 @@
 .profile {
     position: relative;
     @include display(flex, column, center, center, 25px);
-    @include display(flex, column, center, center, 25px);
     padding: 20px;
+    margin: 40px;
     background: $body-bg;
     border-radius: 20px;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    z-index: 1;
 
     &_pic {
         width: 100%;
@@ -23,7 +24,6 @@
                 cursor: pointer;
                 visibility: visible;
                 box-shadow: rgba(129, 129, 129, 0.2) 0px 2px 8px 0px;
-                
             }
             .fa-solid {
                 cursor: pointer;
@@ -78,11 +78,10 @@
                 padding: 13px;
                 border: 1px solid $light-gray;
                 border-radius: 10px;
-                
-                &:focus{
+
+                &:focus {
                     outline: none;
                 }
-                
             }
         }
 
@@ -96,7 +95,7 @@
                 padding: 13px;
                 border: 1px solid $light-gray;
                 border-radius: 10px;
-                &:focus{
+                &:focus {
                     outline: none;
                 }
             }

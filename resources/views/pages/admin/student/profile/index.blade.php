@@ -27,7 +27,7 @@
          profilTitle.classList.remove("active_title");
          passwordEdit.style.display = "flex";
          profilEdit.style.display = "none";
-         
+
       });
 
       // icon.addEventListener("click", () => {
@@ -40,36 +40,35 @@
 
 @section('content')
 <div class="profile">
-      <div class="profile_pic">
-         <div class="profile_pic-img" id="profile_pic">
-            <label for="file"><img src="http://127.0.0.1:8000/uploads/student/man.png"  alt="profile" />
-           <i class="fa-solid fa-pen-to-square" id="icon"></i></label> 
-         </div>
-         <p>Student</p>
-         <input type="file" hidden id="file"/>
+   <div class="profile_pic">
+      <div class="profile_pic-img" id="profile_pic">
+         <label for="file"><img src="http://127.0.0.1:8000/uploads/student/man.png" alt="profile" />
+            <i class="fa-solid fa-pen-to-square" id="icon"></i></label>
       </div>
-      
-      <div class="profile_edit">
-         <div class="profile_edit-titles">
-            <h3 class="active_title" id="title_profile">Profil</h3>
-            <h3 id="title_password">Password</h3>
-         </div>
-         <div class="profile_edit-profil" id="edit-profile">
-            <input type="text" placeholder="Full name"/>
-            <input type="text" placeholder="City"/>
-            <input type="number" placeholder="Telephone"/>
-            <input type="email" placeholder="Email"/>
-            <input type="address" placeholder="Address"/>
-            <button type="submit">Update</button>
-         </div>
+      <p>Student</p>
+      <input type="file" hidden id="file" />
+   </div>
 
-         <div class="profile_edit-password" id="edit-password">
-            <input type="password" placeholder="Old Password"/>
-            <input type="password" placeholder="New Password"/>
-            <button>Update</button>
-         </div>
+   <div class="profile_edit">
+      <div class="profile_edit-titles">
+         <h3 class="active_title" id="title_profile">Profil</h3>
+         <h3 id="title_password">Password</h3>
       </div>
-   
+      <div class="profile_edit-profil" id="edit-profile">
+         <input type="text" placeholder="Full name" />
+         <input type="text" placeholder="City" />
+         <input type="number" placeholder="Telephone" />
+         <input type="email" placeholder="Email" />
+         <input type="address" placeholder="Address" />
+         <button type="submit">Update</button>
+      </div>
+
+      <div class="profile_edit-password" id="edit-password">
+         <input type="password" placeholder="Old Password" />
+         <input type="password" placeholder="New Password" />
+         <button>Update</button>
+      </div>
+   </div>
+
 </div>
 @endsection
-

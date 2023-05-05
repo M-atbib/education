@@ -1,6 +1,6 @@
 .content_block {
     background-color: #f5f5f5;
-    
+
     .footer {
         .footercontent {
             .link {
@@ -13,11 +13,12 @@
         }
     }
     .main {
-        margin-left: 20%;
-        padding-top: 131px;
+        margin-left: 0;
+        padding-top: 160px;
         margin-top: 0 !important;
     }
 }
+
 .navbar_master_pc {
     background-color: #d8eefe;
     position: fixed !important;
@@ -31,4 +32,12 @@
     width: 100%;
     top: 0px;
     z-index: 10;
+}
+
+@include media-lg {
+    .content_block {
+        .main {
+            margin-left: 20%;
+        }
+    }
 }
