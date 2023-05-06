@@ -1,12 +1,13 @@
 document.addEventListener("DOMContentLoaded", () => {
     const dropdown = document.getElementById("dropdown");
     const content = document.getElementById("content");
+    const close = document.getElementById("close");
 
     dropdown.addEventListener("click", () => {
-        if (content.style.display !== "none") {
-            content.style.display = "none";
-        } else {
-            content.style.display = "block";
-        }
+        content.style.display = "block";
+    });
+
+    close.addEventListener("click", () => {
+        content.style.display = "none";
     });
 });

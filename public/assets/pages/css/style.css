@@ -3071,6 +3071,64 @@
     width: 30%;
   }
 }
+.apprentissage {
+  margin: 20px 40px;
+  color: #094067;
+  user-select: none;
+}
+.apprentissage h1 {
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.apprentissage_content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.apprentissage_content-items {
+  width: 265px;
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+}
+.apprentissage_content-items h3 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+.apprentissage_content-items ul {
+  padding-left: 0;
+  margin-bottom: 0;
+  padding-right: 25px;
+  list-style: none;
+}
+.apprentissage_content-items ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.apprentissage_content-items ul li p {
+  font-size: 20px;
+}
+.apprentissage_content-items button {
+  cursor: pointer;
+  width: 100%;
+  border: none;
+  color: #548a54;
+  padding: 7px;
+  border-radius: 5px;
+  background: #e6fde6;
+}
+.apprentissage_content-items button:hover {
+  color: #e6fde6;
+  background: #548a54;
+}
+
 .login {
   text-align: center;
 }

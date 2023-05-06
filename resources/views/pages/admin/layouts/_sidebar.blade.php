@@ -6,7 +6,7 @@
           </div>
 
           <div class="sidebar_container-content" id="content">
-
+               <i class="fa-solid fa-xmark" id="close"></i>
                @if (Auth::user()->type_user == 1)
                @include('pages.admin.layouts.sidebar._student')
                @elseif (Auth::user()->type_user == 2)
