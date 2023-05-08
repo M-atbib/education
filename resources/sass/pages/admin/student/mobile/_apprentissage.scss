@@ -1,54 +1,143 @@
 .apprentissage {
-    margin: 20px 40px;
-    color: $blue;
-    user-select: none;
-
-    h1 {
-        font-weight: 300;
-        margin-bottom: 20px;
-    }
-
-    &_content {
-        @include display(flex, row, center, center, 20px);
-        flex-wrap: wrap;
-        &-items {
-            width: 265px;
+    &_main {
+        &-course {
+            height: 19%;
+            width: 100%;
             background: white;
-            padding: 15px;
             border-radius: 10px;
+            cursor: pointer;
+            padding: 15px;
+            margin-bottom: 30px;
 
-            h3 {
-                font-size: 22px;
-                font-weight: 600;
-                margin-bottom: 15px;
-            }
+            &_link {
+                @include display(flex, row, space-between, center, 10px);
+                text-decoration: none;
 
-            ul {
-                padding-left: 0;
-                margin-bottom: 0;
-                padding-right: 25px;
-                list-style: none;
+                &-title {
+                    @include display(flex, row, flex-start, center, 15px);
 
-                li {
-                    @include display(flex, row, space-between, center, 10px);
-                    p {
-                        font-size: 20px;
+                    img {
+                        width: 134px;
+                        height: 98px;
+                        border-radius: 10px;
+                    }
+                    div {
+                        h3 {
+                            color: $blue;
+                            font-size: 17px;
+                        }
+
+                        p {
+                            font-size: 10px;
+                            color: $text;
+                        }
                     }
                 }
+                .fa-solid {
+                    color: $text;
+                    font-size: 20px;
+                }
             }
+        }
+    }
 
-            button {
-                cursor: pointer;
-                width: 100%;
-                border: none;
-                color: $green;
-                padding: 7px;
-                border-radius: 5px;
-                background: $light-green;
+    &_vide {
+        width: 60%;
+        margin: 100px auto;
 
-                &:hover {
-                    color: $light-green;
-                    background: $green;
+        img {
+            width: 100%;
+            opacity: 0.3;
+        }
+    }
+
+    &_detail {
+        @include display(flex, column, center, center, 50px);
+        width: 90%;
+        margin: 35px auto;
+        padding: 0;
+        position: relative;
+        user-select: none;
+
+        &-description {
+            width: 100%;
+            padding: 0;
+            background: white;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            &_upsection {
+                padding: 15px;
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                    margin-bottom: 20px;
+                }
+
+                &-title {
+                    margin-bottom: 35px;
+
+                    h2 {
+                        color: $blue;
+                        font-weight: 600;
+                    }
+                }
+
+                p {
+                    color: $text;
+                    font-weight: 300;
+                }
+            }
+        }
+
+        &-chapters {
+            width: 100%;
+
+            p {
+                margin-bottom: 0;
+            }
+            &_container {
+                border: 2px solid $light-gray;
+                border-radius: 10px;
+                margin-bottom: 20px;
+                &-head {
+                    @include display(flex, row, space-between, center, 10px);
+                    background: white;
+                    padding: 10px;
+                    border-radius: 10px;
+                    cursor: pointer;
+
+                    .title {
+                        @include display(flex, row, center, center, 10px);
+                        i {
+                            color: $text;
+                            font-size: 17px;
+                        }
+                        h3 {
+                            font-size: 16px;
+                            color: $blue;
+                            margin-bottom: 0;
+                        }
+                    }
+
+                    p {
+                        color: $text;
+                    }
+                }
+
+                &-items {
+                    display: none;
+                    background: $sec-bg;
+                    margin: 0;
+                    padding: 1rem 1.5rem;
+                    list-style: none;
+                    border-bottom-left-radius: 10px;
+                    border-bottom-right-radius: 10px;
+
+                    li {
+                        @include display(flex, row, flex-start, center, 10px);
+                        margin-bottom: 12px;
+                    }
                 }
             }
         }

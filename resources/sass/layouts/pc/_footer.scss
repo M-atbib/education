@@ -1,78 +1,77 @@
-.footer{
+.footer {
     background-color: $sec-bg;
     padding-top: 20px;
-    .footercontent{
-        .link{
+
+    .footercontent {
+        .link {
             display: flex;
             justify-content: space-between;
             align-items: center;
             border-bottom: 1px solid $blue;
 
-            .logo{
-                img{
+            .logo {
+                img {
                     max-width: 80px;
                 }
                 margin-bottom: 10px;
             }
-            .contact{
+            .contact {
                 font-size: 35px;
                 margin-bottom: 10px;
-                a{
+                a {
                     color: $blue;
-                    i{
+                    i {
                         border-radius: 50%;
                     }
-                    &:hover{
+                    &:hover {
                         color: #1167a5;
                     }
                 }
             }
         }
-        .info{
+        .info {
             display: flex;
             justify-content: space-between;
             align-items: center;
             margin-top: 20px;
             border-bottom: 1px solid $blue;
-            .suuport{
-                h2{
+            .suuport {
+                h2 {
                     font-size: 19px;
                     font-weight: bold;
                     color: $blue;
                 }
-                .flex{
+                .flex {
                     display: flex;
-                    div{
+                    div {
                         margin-right: 10px;
-                        a{
+                        a {
                             display: block;
                             margin: 5px 0px;
                             color: #636363;
                             text-decoration: none;
-                            &:hover{
+                            &:hover {
                                 color: #252525;
                             }
                         }
                     }
                 }
             }
-            .application{
-                a{
+            .application {
+                a {
                     display: block;
                     margin: 10px 0;
-                    img{
+                    img {
                         max-width: 150px;
                         border-radius: 10px;
-                        
                     }
                 }
-                
             }
             @media (max-width: 792px) {
                 display: none;
-               }
+            }
         }
-        .copywriting{
+        .copywriting {
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -83,32 +82,30 @@
                 display: block;
                 text-align: center;
                 margin-bottom: 0px;
-               }
-            .copywritinginfo{
-                i{
+            }
+            .copywritinginfo {
+                i {
                     margin-right: 5px;
                 }
                 color: $blue;
                 font-weight: bold;
-                span{
+                span {
                     color: #636363;
                     font-weight: 500;
                 }
             }
-            .securise{
+            .securise {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                p{
+                p {
                     vertical-align: middle;
                     margin-top: 18px;
                 }
-                img{
+                img {
                     max-width: 90px;
-                    
                 }
             }
-
         }
     }
 }

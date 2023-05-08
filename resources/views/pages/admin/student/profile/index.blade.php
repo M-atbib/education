@@ -39,11 +39,13 @@
 @endsection
 
 @section('content')
-<div class="profile">
+<div class="profile container-sm ">
    <div class="profile_pic">
       <div class="profile_pic-img" id="profile_pic">
-         <label for="file"><img src="http://127.0.0.1:8000/uploads/student/man.png" alt="profile" />
-            <i class="fa-solid fa-pen-to-square" id="icon"></i></label>
+         <label for="file">
+            <img src="http://127.0.0.1:8000/uploads/student/man.png" alt="profile" />
+            <i class="fa-solid fa-pen-to-square" id="icon"></i>
+         </label>
       </div>
       <p>Student</p>
       <input type="file" hidden id="file" />

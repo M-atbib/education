@@ -4,7 +4,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const close = document.getElementById("close");
 
     dropdown.addEventListener("click", () => {
-        content.style.display = "block";
+        if (content.style.display !== "block") {
+            content.style.display = "block";
+        } else {
+            content.style.display = "none";
+        }
     });
 
     close.addEventListener("click", () => {

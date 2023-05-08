@@ -1,0 +1,72 @@
+.emploi {
+    margin: 20px 40px 250px 40px;
+    color: $blue;
+    user-select: none;
+    height: 100%;
+
+    h1 {
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+
+    &_content {
+        @include display(flex, row, center, center, 20px);
+        flex-wrap: wrap;
+        &-items {
+            width: 265px;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+
+            h3 {
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 15px;
+            }
+
+            ul {
+                padding-left: 0;
+                margin-bottom: 0;
+                padding-right: 25px;
+                list-style: none;
+
+                li {
+                    @include display(flex, row, space-between, center, 10px);
+                    p {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            button {
+                cursor: pointer;
+                width: 100%;
+                border: none;
+
+                padding: 7px;
+                border-radius: 5px;
+                background: $light-green;
+
+                a {
+                    text-decoration: none;
+                    color: $green;
+                }
+
+                &:hover {
+                    background: $green;
+                    a {
+                        color: $light-green;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .emploi {
+        &_content {
+            justify-content: flex-start;
+        }
+    }
+}

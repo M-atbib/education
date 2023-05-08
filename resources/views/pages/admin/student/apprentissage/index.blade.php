@@ -5,94 +5,50 @@
 
 
 @section('content')
-<div class="apprentissage">
-   <h1>Mes Formations</h1>
-   <div class="apprentissage_content">
-      <div class="apprentissage_content-items">
-         <h3>kifach t9ad atay</h3>
-         <ul>
-            <li>
-               <p>Lundi</p>
-               <p>11 - 12</p>
-            </li>
-            <li>
-               <p>Mardi</p>
-               <p>2 - 4</p>
-            </li>
-         </ul>
-         <button>Join the meeting</button>
-      </div>
-      <div class="apprentissage_content-items">
-         <h3>kifach t9ad atay</h3>
-         <ul class="apprentissage_content-items_time">
-            <li>
-               <p>Lundi</p>
-               <p>11 - 12</p>
-            </li>
-            <li>
-               <p>Mardi</p>
-               <p>2 - 4</p>
-            </li>
-         </ul>
-         <button>Join the meeting</button>
-      </div>
-      <div class="apprentissage_content-items">
-         <h3>kifach t9ad atay</h3>
-         <ul class="apprentissage_content-items_time">
-            <li>
-               <p>Lundi</p>
-               <p>11 - 12</p>
-            </li>
-            <li>
-               <p>Mardi</p>
-               <p>2 - 4</p>
-            </li>
-         </ul>
-         <button>Join the meeting</button>
-      </div>
-      <div class="apprentissage_content-items">
-         <h3>kifach t9ad atay</h3>
-         <ul class="apprentissage_content-items_time">
-            <li>
-               <p>Lundi</p>
-               <p>11 - 12</p>
-            </li>
-            <li>
-               <p>Mardi</p>
-               <p>2 - 4</p>
-            </li>
-         </ul>
-         <button>Join the meeting</button>
-      </div>
-      <div class="apprentissage_content-items">
-         <h3>kifach t9ad atay</h3>
-         <ul class="apprentissage_content-items_time">
-            <li>
-               <p>Lundi</p>
-               <p>11 - 12</p>
-            </li>
-            <li>
-               <p>Mardi</p>
-               <p>2 - 4</p>
-            </li>
-         </ul>
-         <button>Join the meeting</button>
-      </div>
-      <div class="apprentissage_content-items">
-         <h3>kifach t9ad atay</h3>
-         <ul class="apprentissage_content-items_time">
-            <li>
-               <p>Lundi</p>
-               <p>11 - 12</p>
-            </li>
-            <li>
-               <p>Mardi</p>
-               <p>2 - 4</p>
-            </li>
-         </ul>
-         <button>Join the meeting</button>
-      </div>
-
+<div class="apprentissage_main container-sm">
+   <div class="apprentissage_main-course">
+      <a class="apprentissage_main-course_link" href="{{ route('apprentissage.detail') }}">
+         <div class="apprentissage_main-course_link-title">
+            <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
+            <div>
+               <h3>Pratique de l'oral</h3>
+               <p>Progress: 2/22 classes</p>
+            </div>
+         </div>
+         <i class="fa-solid fa-circle-chevron-right"></i>
+      </a>
    </div>
+
+   <div class="apprentissage_main-course">
+      <a class="apprentissage_main-course_link" href="{{ route('apprentissage.detail') }}">
+         <div class="apprentissage_main-course_link-title">
+            <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
+            <div>
+               <h3>Pratique de l'oral</h3>
+               <p>Progress: 2/22 classes</p>
+            </div>
+         </div>
+         <i class="fa-solid fa-circle-chevron-right"></i>
+      </a>
+   </div>
+
+   <div class="apprentissage_main-course">
+      <a class="apprentissage_main-course_link" href="{{ route('apprentissage.detail') }}">
+         <div class="apprentissage_main-course_link-title">
+            <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
+            <div>
+               <h3>Pratique de l'oral</h3>
+               <p>Progress: 2/22 classes</p>
+            </div>
+         </div>
+         <i class="fa-solid fa-circle-chevron-right"></i>
+      </a>
+   </div>
+
 </div>
 @endsection
+
+<div class="progress">
+   <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+   </div>
+</div>
