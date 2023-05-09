@@ -41,7 +41,7 @@
       </div>
 
       <div class="progress apprentissage_detail-decription_progress" style="height:3px">
-         <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+         <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:60%">
          </div>
       </div>
    </div>
