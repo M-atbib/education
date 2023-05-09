@@ -5,6 +5,7 @@ use App\Http\Controllers\testController;
 use App\Http\Controllers\visitor\AllformationController;
 use App\Http\Controllers\admin\student\DashboardController;
 use App\Http\Controllers\admin\student\ProfileController;
+use App\Http\Controllers\admin\student\EmploiController;
 use App\Http\Controllers\visitor\EnseignantesController;
 use App\Http\Controllers\visitor\HomeController;
 use App\Http\Controllers\visitor\PanierController;
@@ -39,16 +40,19 @@ Route::group(
     ],
     function () {
 
-
         Route::group(['prefix' => 'profile'], function () {
             Route::get('/', [ProfileController::class, 'index'])->name('student.index');
         });
 
-
         Route::group(['prefix' => 'apprentissage'], function () {
             Route::get('/', [ApprentissageController::class, 'index'])->name('apprentissage.index');
+            Route::get('/detail', [ApprentissageController::class, 'detail'])->name('apprentissage.detail');
+            Route::get('/vide', [ApprentissageController::class, 'vide'])->name('apprentissage.vide');
         });
 
+        Route::group(['prefix' => 'emploi'], function () {
+            Route::get('/', [EmploiController::class, 'index'])->name('emploi.index');
+        });
     },
-        
+
 );

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\admin\student;
 
 use App\Http\Controllers\Controller;
 
-class ApprentissageController extends Controller
+class EmploiController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -23,14 +23,6 @@ class ApprentissageController extends Controller
      */
     public function index()
     {
-        return view('pages.admin.student.apprentissage.index');
-    }
-    public function detail()
-    {
-        return view('pages.admin.student.apprentissage.detail');
-    }
-    public function vide()
-    {
-        return view('pages.admin.student.apprentissage.vide');
+        return view('pages.admin.student.emploi.index');
     }
 }

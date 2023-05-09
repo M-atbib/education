@@ -2,12 +2,14 @@
 $body-bg: white;
 $sec-bg: #d8eefe;
 $blue: #094067;
-
 $sec_blue: #3da9fc;
+$text: #4c80a5;
 $gray: #5f6c7b;
 $light-gray: #cdcdcd;
 $pink: #ef4565;
 $yellow: gold;
+$green: #548a54;
+$light-green: #e6fde6;
 
 // Typography
 $font-family-sans-serif: "Inter", sans-serif;
@@ -26,7 +28,6 @@ $line-height-base: 1.6;
 @mixin hideContent() {
     position: absolute;
     visibility: hidden;
-    
 }
 
 @mixin media-sm {
@@ -41,15 +42,14 @@ $line-height-base: 1.6;
     }
 }
 
-@mixin media-xl{
-    @media screen and (min-width: 1280px){
+@mixin media-xl {
+    @media screen and (min-width: 1280px) {
         @content;
     }
 }
 
-@mixin media-2xl{
-    @media screen and (min-width: 1440px){
+@mixin media-2xl {
+    @media screen and (min-width: 1440px) {
         @content;
     }
 }
-

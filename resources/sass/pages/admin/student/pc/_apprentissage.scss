@@ -1,0 +1,86 @@
+@include media-lg {
+    .apprentissage {
+        &_main {
+            @include display(flex, row, flex-start, center, 30px);
+            flex-wrap: wrap;
+            margin-bottom: 200px;
+            &-course {
+                width: 45% !important;
+                margin-bottom: 0 !important;
+            }
+        }
+
+        &_vide {
+            width: 40% !important;
+        }
+
+        &_detail {
+            flex-direction: row !important;
+            align-items: flex-start !important;
+            &-description {
+                width: 50% !important;
+            }
+
+            &-chapters {
+                width: 50% !important;
+
+                &_container {
+                    &-head {
+                        padding-left: 15px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-xl {
+    .apprentissage {
+        &_main {
+            &-course {
+                &_link {
+                    &-title {
+                        div {
+                            h3 {
+                                font-size: 24px !important;
+                            }
+                            p {
+                                font-size: 12px !important;
+                            }
+                        }
+                    }
+                    .fa-solid {
+                        font-size: 25px !important;
+                    }
+                }
+            }
+        }
+
+        &_vide {
+            width: 30% !important;
+            img {
+                width: 50%;
+            }
+        }
+
+        &_detail {
+            &-chapters {
+                &_container {
+                    &-head {
+                        padding-right: 25px !important;
+                        padding-left: 25px !important;
+
+                        .title {
+                            i {
+                                font-size: 20px !important;
+                            }
+                            h3 {
+                                font-size: 19px !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
