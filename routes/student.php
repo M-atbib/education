@@ -6,6 +6,10 @@ use App\Http\Controllers\visitor\AllformationController;
 use App\Http\Controllers\admin\student\DashboardController;
 use App\Http\Controllers\admin\student\ProfileController;
 use App\Http\Controllers\admin\student\EmploiController;
+use App\Http\Controllers\admin\student\GroupChatController;
+use App\Http\Controllers\admin\student\ProfChatController;
+use App\Http\Controllers\admin\student\PaiementsController;
+use App\Http\Controllers\admin\student\AttestationController;
 use App\Http\Controllers\visitor\EnseignantesController;
 use App\Http\Controllers\visitor\HomeController;
 use App\Http\Controllers\visitor\PanierController;
@@ -48,6 +52,22 @@ Route::group(
             Route::get('/', [ApprentissageController::class, 'index'])->name('apprentissage.index');
             Route::get('/detail', [ApprentissageController::class, 'detail'])->name('apprentissage.detail');
             Route::get('/vide', [ApprentissageController::class, 'vide'])->name('apprentissage.vide');
+        });
+
+        Route::group(['prefix' => 'groupchat'], function () {
+            Route::get('/', [GroupChatController::class, 'index'])->name('groupchat.index');
+        });
+
+        Route::group(['prefix' => 'profchat'], function () {
+            Route::get('/', [ProfChatController::class, 'index'])->name('profchat.index');
+        });
+
+        Route::group(['prefix' => 'paiements'], function () {
+            Route::get('/', [PaiementsController::class, 'index'])->name('paiements.index');
+        });
+
+        Route::group(['prefix' => 'attestation'], function () {
+            Route::get('/', [AttestationController::class, 'index'])->name('attestation.index');
         });
 
         Route::group(['prefix' => 'emploi'], function () {

@@ -39,7 +39,7 @@
 @endsection
 
 @section('content')
-<div class="profile container-sm ">
+<div class="profile">
    <div class="profile_pic">
       <div class="profile_pic-img" id="profile_pic">
          <label for="file">
