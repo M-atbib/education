@@ -15,7 +15,7 @@
                <p>Progress: 2/22 classes</p>
             </div>
          </div>
-         <i class="fa-solid fa-circle-chevron-right"></i>
+         <i class="fa-solid fa-angle-right"></i>
       </a>
    </div>
 
@@ -28,7 +28,7 @@
                <p>Progress: 2/22 classes</p>
             </div>
          </div>
-         <i class="fa-solid fa-circle-chevron-right"></i>
+         <i class="fa-solid fa-angle-right"></i>
       </a>
    </div>
 
@@ -41,7 +41,7 @@
                <p>Progress: 2/22 classes</p>
             </div>
          </div>
-         <i class="fa-solid fa-circle-chevron-right"></i>
+         <i class="fa-solid fa-angle-right"></i>
       </a>
    </div>
 

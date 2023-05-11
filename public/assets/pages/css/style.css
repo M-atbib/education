@@ -217,8 +217,8 @@
 .navbar_mobile {
   background-color: #d8eefe;
   width: 100%;
-  margin-top: 50px;
   position: fixed;
+  top: 50px;
   z-index: 10;
 }
 .navbar_mobile .navbar {
@@ -3137,6 +3137,7 @@
   cursor: pointer;
   padding: 15px;
   margin-bottom: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .apprentissage_main-course_link {
   display: flex;
@@ -3167,7 +3168,10 @@
   color: #4c80a5;
 }
 .apprentissage_main-course_link .fa-solid {
-  color: #4c80a5;
+  color: #094067;
+  background-color: #d8eefe;
+  padding: 5px 10px;
+  border-radius: 50%;
   font-size: 20px;
 }
 .apprentissage_vide {
@@ -3196,6 +3200,7 @@
   background: white;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .apprentissage_detail-description_upsection {
   padding: 15px;
@@ -3226,6 +3231,7 @@
   border: 2px solid #cdcdcd;
   border-radius: 10px;
   margin-bottom: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 .apprentissage_detail-chapters_container-head {
   display: flex;
