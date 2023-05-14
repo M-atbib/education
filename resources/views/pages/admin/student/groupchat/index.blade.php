@@ -6,32 +6,56 @@
 @section('javascript')
 <script language="javascript">
     document.addEventListener("DOMContentLoaded", () => {
-        const chat = document.getElementById('chat');
-        const course = document.querySelectorAll('.groupchat_courses_list_course');
-        const coursesList = document.getElementById('courses-list');
-        const contact = document.getElementById('contact');
+        const chatClass = document.querySelector('.groupchat_chat');
+        const courseClass = document.querySelectorAll('.groupchat_courses_list_course');
+        const coursesListClass = document.querySelector('.groupchat_courses');
+        const contactClass = document.querySelector('.groupchat_chat_head');
 
-        const windowWidth = window.innerWidth;
+        let windowWidth = window.innerWidth;
+        if (windowWidth < 900) {
+            chatClass.setAttribute('id', 'chat');
+            coursesListClass.setAttribute('id', 'course-list');
+            contactClass.setAttribute('id', 'contact');
+            courseClass.forEach((course) => {
+                course.classList.add("course");
+            })
 
-        course.forEach((course) => {
-            course.addEventListener('click', () => {
-                chat.style.display = 'flex';
-                coursesList.style.display = 'none';
-            });
-        })
+            chatId = document.getElementById('chat');
+            coursesListId = document.getElementById('course-list');
+            contactId = document.getElementById('contact');
+            courseId = document.querySelectorAll('.course');
 
-        contact.addEventListener('click', () => {
-            chat.style.display = 'none';
-            coursesList.style.display = 'block';
-        })
+            courseId.forEach((course) => {
+                course.addEventListener('click', () => {
+                    chatId.style.display = 'flex';
+                    coursesListId.style.display = 'none';
+                });
+            })
+
+            contactId.addEventListener('click', () => {
+                chatId.style.display = 'none';
+                coursesListId.style.display = 'block';
+            })
+
+        } else if (windowWidth >= 900) {
+            chatClass.removeAttribute('id');
+            coursesListClass.removeAttribute('id');
+            contactClass.removeAttribute('id');
+            courseClass.forEach((course) => {
+                course.classList.remove('course');
+            })
+
+            console.log(chatClass);
+        }
+
     })
 </script>
 @endsection
 
 @section('content')
 <div class="groupchat container-sm">
-    <div class="groupchat_chat" id="chat">
-        <div class="groupchat_chat_head" id="contact">
+    <div class="groupchat_chat">
+        <div class="groupchat_chat_head">
             <div class="groupchat_chat_head_left">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <h2>Pratique de l'oral</h2>
@@ -41,54 +65,6 @@
         </div>
 
         <div class="groupchat_chat_body">
-            <!--<div class="groupchat_chat_body_msgs">
-                <div class="groupchat_chat_body_msgs_rightmsg">
-                    <small>08:99AM</small>
-                    <p>mal din dinmak makatselli alo alo alo reseaus walo</p>
-                </div>
-
-                <div class="groupchat_chat_body_msgs_leftmsg">
-                    <p>Aloo salamo 3alyakom</p>
-                    <small>09:99AM</small>
-                </div>
-                <div class="groupchat_chat_body_msgs_rightmsg">
-                    <small>08:99AM</small>
-                    <p>mal din dinmak makatselli alo alo alo reseaus walo</p>
-                </div>
-
-                <div class="groupchat_chat_body_msgs_leftmsg">
-                    <p>Aloo salamo 3alyakom</p>
-                    <small>09:99AM</small>
-                </div>
-                <div class="groupchat_chat_body_msgs_rightmsg">
-                    <small>08:99AM</small>
-                    <p>mal din dinmak makatselli alo alo alo reseaus walo</p>
-                </div>
-
-                <div class="groupchat_chat_body_msgs_leftmsg">
-                    <p>Aloo salamo 3alyakom</p>
-                    <small>09:99AM</small>
-                </div>
-                <div class="groupchat_chat_body_msgs_rightmsg">
-                    <small>08:99AM</small>
-                    <p>mal din dinmak makatselli alo alo alo reseaus walo</p>
-                </div>
-
-                <div class="groupchat_chat_body_msgs_leftmsg">
-                    <p>Aloo salamo 3alyakom</p>
-                    <small>09:99AM</small>
-                </div>
-                <div class="groupchat_chat_body_msgs_rightmsg">
-                    <small>08:99AM</small>
-                    <p>mal din dinmak makatselli alo alo alo reseaus walo</p>
-                </div>
-
-                <div class="groupchat_chat_body_msgs_leftmsg">
-                    <p>Aloo salamo 3alyakom</p>
-                    <small>09:99AM</small>
-                </div>
-            </div>-->
-
             <div class="card groupchat_chat_body_msgs">
                 <div id="sohbet" class="card">
 
@@ -126,12 +102,12 @@
         </div>
     </div>
 
-    <div class="groupchat_courses" id="courses-list">
+    <div class="groupchat_courses">
         <h2>Formation</h2>
         <input type="text" name="search" id="search" placeholder="Search..">
 
         <div class="groupchat_courses_list">
-            <div class="groupchat_courses_list_course" id="course">
+            <div class="groupchat_courses_list_course">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <div class="groupchat_courses_course_title">
                     <h3>Pratique de l'oral</h3>
@@ -141,7 +117,7 @@
 
             <div class="line"></div>
 
-            <div class="groupchat_courses_list_course" id="course">
+            <div class="groupchat_courses_list_course">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <div class="groupchat_courses_course_title">
                     <h3>Pratique de l'oral</h3>
@@ -150,7 +126,7 @@
             </div>
             <div class="line"></div>
 
-            <div class="groupchat_courses_list_course" id="course">
+            <div class="groupchat_courses_list_course">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <div class="groupchat_courses_course_title">
                     <h3>Pratique de l'oral</h3>
@@ -159,7 +135,7 @@
             </div>
             <div class="line"></div>
 
-            <div class="groupchat_courses_list_course" id="course">
+            <div class="groupchat_courses_list_course">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <div class="groupchat_courses_course_title">
                     <h3>Pratique de l'oral</h3>
@@ -168,7 +144,7 @@
             </div>
             <div class="line"></div>
 
-            <div class="groupchat_courses_list_course" id="course">
+            <div class="groupchat_courses_list_course">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <div class="groupchat_courses_course_title">
                     <h3>Pratique de l'oral</h3>
@@ -176,14 +152,6 @@
                 </div>
             </div>
             <div class="line"></div>
-
-            <div class="groupchat_courses_list_course" id="course">
-                <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
-                <div class="groupchat_courses_course_title">
-                    <h3>Pratique de l'oral</h3>
-                    <p>Progress: 2/22 classes</p>
-                </div>
-            </div>
         </div>
     </div>
 </div>
