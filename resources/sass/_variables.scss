@@ -25,9 +25,41 @@ $line-height-base: 1.6;
     gap: $gap;
 }
 
+@mixin flex($direction, $justify, $align, $gap) {
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+    gap: $gap;
+}
+
+//Font adjsutement
+@mixin font($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
 @mixin hideContent() {
     position: absolute;
     visibility: hidden;
+}
+
+//Custom scrollbar
+@mixin scrollbar() {
+    ::-webkit-scrollbar {
+        width: 0px;
+    }
+    ::-webkit-scrollbar-track {
+        background: #f1f1f1;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+        background: $light-gray;
+        border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background: $gray;
+    }
 }
 
 @mixin media-sm {
@@ -52,4 +84,8 @@ $line-height-base: 1.6;
     @media screen and (min-width: 1440px) {
         @content;
     }
+}
+
+@mixin transition-ease {
+    transition: all 0.5s ease-in-out;
 }

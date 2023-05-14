@@ -29,11 +29,6 @@
          profilEdit.style.display = "none";
 
       });
-
-      // icon.addEventListener("click", () => {
-      //    file.style.visibility = "visible";
-      //    profilePic.style.opacity="0";
-      // })
    })
 </script>
 @endsection

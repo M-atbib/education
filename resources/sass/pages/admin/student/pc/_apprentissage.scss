@@ -3,7 +3,6 @@
         &_main {
             @include display(flex, row, flex-start, center, 30px);
             flex-wrap: wrap;
-            margin-bottom: 200px;
             &-course {
                 width: 45% !important;
                 margin-bottom: 0 !important;

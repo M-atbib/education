@@ -1,0 +1,328 @@
+.groupchat {
+    user-select: none;
+    @include scrollbar;
+    img {
+        width: 55px;
+        border-radius: 5px;
+    }
+    p,
+    h2,
+    h3 {
+        margin: 0;
+    }
+
+    &_chat {
+        display: none;
+        @include flex(column, space-between, center, 20px);
+        width: 95%;
+        height: 500px;
+        margin: 20px auto;
+        background: white;
+        border-radius: 20px;
+        padding: 20px;
+
+        &_head {
+            @include display(flex, row, space-between, center, 10px);
+            width: 100%;
+            background-color: $sec-bg;
+            border-radius: 10px;
+            padding: 7px;
+
+            &_left {
+                @include display(flex, row, center, center, 10px);
+
+                h2 {
+                    @include font(15px, 800, $blue);
+                }
+            }
+
+            .line {
+                height: 100%;
+                border: 1px solid $sec_blue;
+            }
+
+            p {
+                @include font(13px, 500, $text);
+            }
+        }
+
+        &_body {
+            width: 100%;
+
+            p {
+                @include font(14px, 400, white);
+            }
+
+            small {
+                @include font(10px, 300, white);
+            }
+
+            &_msgs {
+                height: 330px;
+                overflow-y: scroll;
+                border: none;
+
+                .card {
+                    border: none;
+                }
+
+                a {
+                    text-decoration: none;
+                }
+
+                .balon1,
+                .balon2 {
+                    margin-top: 5px !important;
+                    margin-bottom: 5px !important;
+                }
+
+                .balon1 a {
+                    float: right;
+                    background: $text;
+                    color: #fff !important;
+                    border-radius: 20px 20px 3px 20px;
+                    display: block;
+                    max-width: 75%;
+                    padding: 7px 13px 7px 13px;
+                }
+
+                .balon1:before {
+                    content: attr(data-is);
+                    position: absolute;
+                    right: 15px;
+                    bottom: -0.8em;
+                    display: block;
+                    font-size: 0.75rem;
+                    color: rgba(84, 110, 122, 1);
+                }
+
+                .balon2 a {
+                    float: left;
+                    background: $blue;
+                    color: #fff;
+                    border-radius: 20px 20px 20px 3px;
+                    display: block;
+                    max-width: 75%;
+                    padding: 7px 13px 7px 13px;
+                }
+
+                .balon2:before {
+                    content: attr(data-is);
+                    position: absolute;
+                    left: 13px;
+                    bottom: -0.8em;
+                    display: block;
+                    font-size: 0.75rem;
+                    color: rgba(84, 110, 122, 1);
+                }
+
+                /*&_rightmsg {
+                    @include display(flex, row, space-between, center, 20px);
+                    width: 90%;
+                    align-self: flex-end;
+                    background-color: $text;
+                    padding: 10px 15px;
+                    margin-bottom: 20px;
+                    margin-right: 20px;
+                    border-radius: 10px;
+                    text-align: right;
+                    position: relative;
+                    z-index: 1;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 185px;
+                        left: 264px;
+                        width: 20px;
+                        height: 20px;
+                        border-bottom-right-radius: 50%;
+
+                        transform: rotate(90deg);
+                        box-shadow: 0 15px 0 0 $text;
+                        z-index: -1;
+                    }
+                }*/
+
+                /*&_leftmsg {
+                    @include display(flex, row, space-between, center, 20px);
+                    width: 90%;
+                    align-self: flex-start;
+                    background-color: $blue;
+                    padding: 10px 15px;
+                    margin-bottom: 20px;
+                    border-radius: 10px;
+                    text-align: left;
+                    margin-left: 20px;
+                    position: relative;
+                    z-index: 1;
+
+                    &::before {
+                        content: "";
+                        position: absolute;
+                        top: 185px;
+                        left: 264px;
+                        width: 20px;
+                        height: 20px;
+                        border-bottom-right-radius: 50%;
+
+                        transform: rotate(90deg);
+                        box-shadow: 0 15px 0 0 $blue;
+                        z-index: -1;
+                    }
+                }*/
+            }
+
+            &_typemsg {
+                @include display(flex, row, center, center, 0);
+                margin-top: 15px;
+
+                input {
+                    @include font(16px, 400, #000);
+                    width: 100%;
+                    border: 1px solid $light-gray;
+                    border-right: none;
+                    border-top-left-radius: 10px;
+                    border-bottom-left-radius: 10px;
+                    padding: 5px 15px;
+                    outline: none;
+                }
+
+                button {
+                    @include font(16px, 500, white);
+                    padding: 5px 20px;
+                    border: 1px solid $pink;
+                    border-top-right-radius: 10px;
+                    border-bottom-right-radius: 10px;
+                    background: $pink;
+                }
+            }
+        }
+    }
+
+    &_courses {
+        width: 95%;
+        margin: 20px auto;
+        background: white;
+        padding: 15px;
+        border-radius: 15px;
+
+        h2 {
+            @include font(26px, 500, $text);
+        }
+
+        input {
+            @include font(16px, 400, $blue);
+            width: 100%;
+            margin: 25px 0;
+            padding: 5px 10px;
+            border: none;
+            border-radius: 10px;
+            outline: none;
+            background-color: $light-gray;
+            background-image: url("../../../../../../public/assets/image/search.png");
+            background-size: 16px;
+            background-repeat: no-repeat;
+            background-position: 95%;
+
+            &::placeholder {
+                @include font(16px, 400, $blue);
+            }
+        }
+
+        &_list {
+            @include display(flex, column, center, center, 15px);
+            width: 100%;
+
+            .line {
+                width: 65%;
+                margin: 5px auto;
+                border: 1px solid $sec-bg;
+            }
+
+            &_course {
+                @include display(flex, row, flex-start, center, 20px);
+                width: 100%;
+                border-radius: 10px;
+                padding: 10px 20px;
+                box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+                cursor: pointer;
+
+                h3 {
+                    @include font(20px, 500, $blue);
+                }
+
+                p {
+                    @include font(14px, 400, $text);
+                }
+            }
+        }
+    }
+}
+
+@include media-lg {
+    .groupchat {
+        @include display(flex, row, center, center, 30px);
+        @include scrollbar;
+        width: 90%;
+        margin: 20px auto;
+
+        &_chat {
+            display: flex;
+            width: 60%;
+            height: 500px;
+
+            &_body {
+                &_msgs {
+                    &_rightmsg {
+                        width: 85%;
+                    }
+                    &_leftmsg {
+                        width: 85%;
+                    }
+                }
+            }
+        }
+
+        &_courses {
+            width: 40%;
+            height: 500px;
+            overflow-y: scroll;
+
+            &_list {
+                &_course {
+                    h3 {
+                        @include font(16px, 500, $blue);
+                    }
+
+                    p {
+                        @include font(10px, 400, $text);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@include media-xl {
+    .groupchat {
+        &_chat {
+            width: 70%;
+        }
+
+        &_courses {
+            width: 30%;
+            &_list {
+                &_course {
+                    h3 {
+                        @include font(20px, 500, $blue);
+                    }
+
+                    p {
+                        @include font(14px, 400, $text);
+                    }
+                }
+            }
+        }
+    }
+}

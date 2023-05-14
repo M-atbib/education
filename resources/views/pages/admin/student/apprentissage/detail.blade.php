@@ -47,7 +47,7 @@
    </div>
 
    <div class="apprentissage_detail-chapters">
-      <div class="apprentissage_detail-chapters_container">
+      <div class="apprentissage_detail-chapters_container active">
          <div class="apprentissage_detail-chapters_container-head" id="title">
             <div class="title">
                <i class="fa-solid fa-chevron-down"></i>
@@ -55,6 +55,7 @@
             </div>
             <p>01h87</p>
          </div>
+
          <ul class="apprentissage_detail-chapters_container-items" id="items">
             <li>
                <i class="fa-solid fa-circle-plus"></i>
