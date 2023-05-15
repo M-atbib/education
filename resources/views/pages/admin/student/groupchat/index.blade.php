@@ -11,42 +11,44 @@
         const coursesListClass = document.querySelector('.groupchat_courses');
         const contactClass = document.querySelector('.groupchat_chat_head');
 
-        let windowWidth = window.innerWidth;
-        if (windowWidth < 900) {
-            chatClass.setAttribute('id', 'chat');
-            coursesListClass.setAttribute('id', 'course-list');
-            contactClass.setAttribute('id', 'contact');
-            courseClass.forEach((course) => {
-                course.classList.add("course");
-            })
+        setInterval(function() {
+            if (window.innerWidth < 900) {
+                chatClass.setAttribute('id', 'chat');
+                coursesListClass.setAttribute('id', 'course-list');
+                contactClass.setAttribute('id', 'contact');
+                courseClass.forEach((course) => {
+                    course.classList.add("course");
+                })
 
-            chatId = document.getElementById('chat');
-            coursesListId = document.getElementById('course-list');
-            contactId = document.getElementById('contact');
-            courseId = document.querySelectorAll('.course');
+                chatId = document.getElementById('chat');
+                coursesListId = document.getElementById('course-list');
+                contactId = document.getElementById('contact');
+                courseId = document.querySelectorAll('.course');
 
-            courseId.forEach((course) => {
-                course.addEventListener('click', () => {
-                    chatId.style.display = 'flex';
-                    coursesListId.style.display = 'none';
-                });
-            })
+                courseId.forEach((course) => {
+                    course.addEventListener('click', () => {
+                        chatId.style.display = 'flex';
+                        coursesListId.style.display = 'none';
+                    });
+                })
 
-            contactId.addEventListener('click', () => {
-                chatId.style.display = 'none';
+                contactId.addEventListener('click', () => {
+                    chatId.style.display = 'none';
+                    coursesListId.style.display = 'block';
+                })
+
+            } else if (window.innerWidth >= 900) {
+                chatId.style.display = 'block';
                 coursesListId.style.display = 'block';
-            })
 
-        } else if (windowWidth >= 900) {
-            chatClass.removeAttribute('id');
-            coursesListClass.removeAttribute('id');
-            contactClass.removeAttribute('id');
-            courseClass.forEach((course) => {
-                course.classList.remove('course');
-            })
-
-            console.log(chatClass);
-        }
+                chatClass.removeAttribute('id');
+                coursesListClass.removeAttribute('id');
+                contactClass.removeAttribute('id');
+                courseClass.forEach((course) => {
+                    course.classList.remove('course');
+                })
+            }
+        }, 300);
 
     })
 </script>
@@ -56,6 +58,7 @@
 <div class="groupchat container-sm">
     <div class="groupchat_chat">
         <div class="groupchat_chat_head">
+            <i class="fa-solid fa-angle-left"></i>
             <div class="groupchat_chat_head_left">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <h2>Pratique de l'oral</h2>
@@ -107,6 +110,16 @@
         <input type="text" name="search" id="search" placeholder="Search..">
 
         <div class="groupchat_courses_list">
+            <div class="groupchat_courses_list_course active">
+                <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
+                <div class="groupchat_courses_course_title">
+                    <h3>Pratique de l'oral</h3>
+                    <p>Progress: 2/22 classes</p>
+                </div>
+            </div>
+
+            <div class="line"></div>
+
             <div class="groupchat_courses_list_course">
                 <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
                 <div class="groupchat_courses_course_title">
@@ -124,6 +137,7 @@
                     <p>Progress: 2/22 classes</p>
                 </div>
             </div>
+
             <div class="line"></div>
 
             <div class="groupchat_courses_list_course">
@@ -133,6 +147,7 @@
                     <p>Progress: 2/22 classes</p>
                 </div>
             </div>
+
             <div class="line"></div>
 
             <div class="groupchat_courses_list_course">
@@ -142,16 +157,7 @@
                     <p>Progress: 2/22 classes</p>
                 </div>
             </div>
-            <div class="line"></div>
 
-            <div class="groupchat_courses_list_course">
-                <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
-                <div class="groupchat_courses_course_title">
-                    <h3>Pratique de l'oral</h3>
-                    <p>Progress: 2/22 classes</p>
-                </div>
-            </div>
-            <div class="line"></div>
         </div>
     </div>
 </div>
