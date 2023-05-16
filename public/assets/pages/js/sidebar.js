@@ -4,24 +4,26 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(function () {
         if (window.innerWidth < 900) {
+            console.log('sidebar 900');
             dropdownClass.setAttribute("id", "dropdown");
             contentClass.setAttribute("id", "content");
 
             dropdownId = document.getElementById("dropdown");
             contentId = document.getElementById("content");
             closeId = document.getElementById("close");
-
+           
             dropdownId.addEventListener("click", () => {
-                if (contentId.style.display !== "block") {
+                if (contentId.style.display != "block") {
                     contentId.style.display = "block";
                 } else {
                     contentId.style.display = "none";
                 }
             });
         } else if (window.innerWidth >= 900) {
+
             contentId.style.display = "block";
             dropdownClass.removeAttribute("id");
             contentClass.removeAttribute("id");
         }
-    }, 300);
+    }, 10);
 });
