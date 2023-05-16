@@ -10,43 +10,48 @@
         const courseClass = document.querySelectorAll('.groupchat_courses_list_course');
         const coursesListClass = document.querySelector('.groupchat_courses');
         const contactClass = document.querySelector('.groupchat_chat_head');
+        setInterval(function(){
+            let windowWidth = window.innerWidth;
 
-        let windowWidth = window.innerWidth;
-        if (windowWidth < 900) {
-            chatClass.setAttribute('id', 'chat');
-            coursesListClass.setAttribute('id', 'course-list');
-            contactClass.setAttribute('id', 'contact');
-            courseClass.forEach((course) => {
-                course.classList.add("course");
-            })
+            if (windowWidth < 900) {
+                console.log('900');
+                chatClass.setAttribute('id', 'chat');
+                coursesListClass.setAttribute('id', 'course-list');
+                contactClass.setAttribute('id', 'contact');
+                courseClass.forEach((course) => {
+                    course.classList.add("course");
+                })
 
-            chatId = document.getElementById('chat');
-            coursesListId = document.getElementById('course-list');
-            contactId = document.getElementById('contact');
-            courseId = document.querySelectorAll('.course');
+                chatId = document.getElementById('chat');
+                coursesListId = document.getElementById('course-list');
+                contactId = document.getElementById('contact');
+                courseId = document.querySelectorAll('.course');
 
-            courseId.forEach((course) => {
-                course.addEventListener('click', () => {
-                    chatId.style.display = 'flex';
-                    coursesListId.style.display = 'none';
-                });
-            })
+                courseId.forEach((course) => {
+                    course.addEventListener('click', () => {
+                        chatId.style.display = 'flex';
+                        coursesListId.style.display = 'none';
+                    });
+                })
 
-            contactId.addEventListener('click', () => {
-                chatId.style.display = 'none';
-                coursesListId.style.display = 'block';
-            })
+                contactId.addEventListener('click', () => {
+                    chatId.style.display = 'none';
+                    coursesListId.style.display = 'block';
+                })
 
-        } else if (windowWidth >= 900) {
-            chatClass.removeAttribute('id');
-            coursesListClass.removeAttribute('id');
-            contactClass.removeAttribute('id');
-            courseClass.forEach((course) => {
-                course.classList.remove('course');
-            })
+            } else if (windowWidth >= 900) {
+                console.log('>=900');
+                chatClass.removeAttribute('id');
+                coursesListClass.removeAttribute('id');
+                contactClass.removeAttribute('id');
+                courseClass.forEach((course) => {
+                    course.classList.remove('course');
+                })
 
-            console.log(chatClass);
-        }
+                console.log(chatClass);
+            }
+        }, 1000);
+        
 
     })
 </script>
