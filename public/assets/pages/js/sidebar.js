@@ -1,18 +1,27 @@
 document.addEventListener("DOMContentLoaded", () => {
-    
-    const dropdown = document.getElementById("dropdown");
-    const content = document.getElementById("content");
-    const close = document.getElementById("close");
+    const dropdownClass = document.querySelector(".sidebar_container-dropdown");
+    const contentClass = document.querySelector(".sidebar_container-content");
 
-    dropdown.addEventListener("click", () => {
-        if (content.style.display !== "block") {
-            content.style.display = "block";
-        } else {
-            content.style.display = "none";
+    setInterval(function () {
+        if (window.innerWidth < 900) {
+            dropdownClass.setAttribute("id", "dropdown");
+            contentClass.setAttribute("id", "content");
+
+            dropdownId = document.getElementById("dropdown");
+            contentId = document.getElementById("content");
+            closeId = document.getElementById("close");
+
+            dropdownId.addEventListener("click", () => {
+                if (contentId.style.display !== "block") {
+                    contentId.style.display = "block";
+                } else {
+                    contentId.style.display = "none";
+                }
+            });
+        } else if (window.innerWidth >= 900) {
+            contentId.style.display = "block";
+            dropdownClass.removeAttribute("id");
+            contentClass.removeAttribute("id");
         }
-    });
-
-    close.addEventListener("click", () => {
-        content.style.display = "none";
-    });
+    }, 300);
 });
