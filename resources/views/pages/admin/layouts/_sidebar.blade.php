@@ -6,6 +6,7 @@
           </div>
 
           <div class="sidebar_container-content">
+               <i class="fa-regular fa-circle-xmark"></i>
                @if (Auth::user()->type_user == 1)
                @include('pages.admin.layouts.sidebar._student')
                @elseif (Auth::user()->type_user == 2)
