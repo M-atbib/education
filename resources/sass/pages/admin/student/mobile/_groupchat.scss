@@ -13,7 +13,7 @@
 
     &_chat {
         display: none;
-        @include flex(column, space-between, center, 20px);
+        @include flex(column, space-between, center, 0px);
         width: 95%;
         height: 500px;
         margin: 20px auto;
@@ -224,9 +224,9 @@
         &_chat {
             display: flex;
             width: 60%;
-            height: 500px;
 
             &_head {
+                padding: 7px 20px;
                 .fa-solid {
                     display: none;
                 }

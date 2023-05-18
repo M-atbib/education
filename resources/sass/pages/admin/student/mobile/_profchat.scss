@@ -1,0 +1,4 @@
+.last-msg {
+    @include display(flex, row, space-between, center, 10px);
+    margin-top: 5px;
+}
