@@ -5,7 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     setInterval(function () {
         if (window.innerWidth < 900) {
-            console.log('sidebar 900');
             dropdownClass.setAttribute("id", "dropdown");
             contentClass.setAttribute("id", "content");
             closeClass.setAttribute("id", "close");
@@ -13,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
             dropdownId = document.getElementById("dropdown");
             contentId = document.getElementById("content");
             closeId = document.getElementById("close");
-           
+
             dropdownId.addEventListener("click", () => {
                 contentId.style.display = "block";
             });
@@ -22,11 +21,10 @@ document.addEventListener("DOMContentLoaded", () => {
                 contentId.style.display = "none";
             });
         } else if (window.innerWidth >= 900) {
-
             contentId.style.display = "block";
 
             dropdownClass.removeAttribute("id");
             contentClass.removeAttribute("id");
         }
-    }, 10);
+    }, 100);
 });

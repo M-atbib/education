@@ -1,0 +1,89 @@
+.attestation {
+    margin-top: 30px;
+    width: 100%;
+
+    h1 {
+        @include font(24px, 400, $blue);
+        margin-bottom: 30px;
+        margin-left: 10px;
+    }
+
+    h2 {
+        @include font(26px, 600, $blue);
+        line-height: 40px;
+    }
+
+    p {
+        @include font(14px, 500, #8195a4);
+        letter-spacing: 0.03rem;
+    }
+
+    button {
+        border: none;
+        border-radius: 10px;
+        background: $sec-bg;
+        @include font(16px, 300, $blue);
+        padding: 7px 25px;
+
+        &:hover {
+            background: $sec-blue;
+        }
+    }
+
+    .certificat {
+        margin: 0 auto;
+        width: 300px;
+        max-width: 350px;
+        background: $body-bg;
+        border-radius: 20px;
+        padding: 20px;
+    }
+
+    .default {
+        display: none;
+    }
+
+    &-current {
+        margin-bottom: 50px;
+    }
+
+    &-coming {
+        margin-bottom: 50px;
+        &_list {
+            .certificat {
+                background: #ededed;
+                h2 {
+                    color: #8d8d8d;
+                }
+                p {
+                    color: #a4a4a4;
+                    line-height: 25px;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}
+
+@include media-md {
+    .attestation {
+        &-current,
+        &-coming {
+            &_list {
+                @include flex(row, flex-start, flex-start, 30px);
+            }
+        }
+    }
+}
+
+@include media-xl {
+    .attestation {
+        width: 85%;
+        &-current,
+        &-coming {
+            &_list {
+                flex-wrap: wrap;
+            }
+        }
+    }
+}

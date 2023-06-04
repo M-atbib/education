@@ -216,10 +216,6 @@
 
 .navbar_mobile {
   background-color: #d8eefe;
-  width: 100%;
-  position: fixed;
-  top: 50px;
-  z-index: 10;
 }
 .navbar_mobile .navbar {
   z-index: 10;
@@ -2828,6 +2824,7 @@
   margin: 0px 5px;
 }
 .content_block .main {
+  position: relative;
   margin-left: 0;
   padding-top: 160px;
   margin-top: 0 !important;
@@ -2838,6 +2835,13 @@
   position: fixed !important;
   width: 100%;
   top: 55px;
+  z-index: 10;
+}
+
+.navbar_master_mobile {
+  position: fixed;
+  top: 50px;
+  width: 100%;
   z-index: 10;
 }
 
@@ -3320,13 +3324,13 @@
   margin: 0;
 }
 .groupchat_chat {
-  display: none;
+  display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 0px;
   width: 95%;
-  height: 500px;
+  height: 510px;
   margin: 20px auto;
   background: white;
   border-radius: 20px;
@@ -3343,9 +3347,6 @@
   border-radius: 10px;
   padding: 7px;
 }
-.groupchat_chat_head .fa-solid {
-  font-size: 20px;
-}
 .groupchat_chat_head_left {
   display: flex;
   flex-direction: row;
@@ -3357,6 +3358,9 @@
   font-size: 15px;
   font-weight: 800;
   color: #094067;
+}
+.groupchat_chat_head_left .fa-solid {
+  font-size: 20px;
 }
 .groupchat_chat_head .line {
   height: 50px;
@@ -3465,8 +3469,20 @@
   border-bottom-right-radius: 10px;
   background: #ef4565;
 }
+.groupchat_chat--mobile {
+  position: absolute;
+  top: 150px;
+  left: 9px;
+  z-index: 1;
+  display: none;
+}
+.groupchat_chat--mobile.groupchat_chat--show {
+  display: block;
+  border-radius: 20px;
+}
 .groupchat_courses {
   width: 95%;
+  height: 500px;
   margin: 20px auto;
   background: white;
   padding: 15px;
@@ -3619,6 +3635,257 @@
   margin-top: 5px;
 }
 
+.paiements {
+  width: 100%;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+.paiements-search {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 30px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.paiements-search input {
+  background: #f5f5f5;
+  border: 0;
+  border-radius: 10px;
+  padding: 10px 20px;
+  width: 57%;
+  margin-right: 15px;
+  outline: none;
+  color: #094067;
+}
+.paiements-search select {
+  background: #f5f5f5;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  color: #4c80a5;
+  outline: none;
+}
+.paiements-table {
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.paiements-table .paye {
+  background-color: #e6fde6;
+  font-size: 13px;
+  color: #548a54;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 15px;
+}
+.paiements-table .attente {
+  background-color: #e9e6fd;
+  font-size: 13px;
+  color: #55548a;
+  border-radius: 10px;
+  border: none;
+  padding: 5px;
+}
+.paiements-table .annule {
+  background-color: #fde6e6;
+  font-size: 13px;
+  color: #8a5454;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px;
+}
+.paiements-table .pret {
+  background-color: #e6fde6;
+  font-size: 13px;
+  color: #548a54;
+  border-radius: 10px;
+  border: none;
+  padding: 5px 25px;
+  text-decoration: underline;
+}
+.paiements-table table {
+  width: 100%;
+}
+.paiements-table table thead tr {
+  border-bottom: 1px solid #a0a0a0;
+}
+.paiements-table table thead tr th {
+  color: #a0a0a0;
+  font-weight: 500;
+  padding: 0 5px 10px 0;
+  font-size: 14px;
+}
+.paiements-table table tbody {
+  color: #094067;
+}
+.paiements-table table tbody tr td {
+  padding: 15px 5px 15px 0;
+  font-weight: 600;
+  font-size: 15px;
+}
+.paiements-navigate {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+  margin-top: 25px;
+}
+.paiements-navigate button {
+  border: none;
+  border-radius: 10px;
+  background: white;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  color: #094067;
+  padding: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .paiements-search input {
+    width: 77%;
+  }
+  .paiements-table .paye {
+    font-size: 15px;
+    padding: 10px 25px;
+  }
+  .paiements-table .attente {
+    font-size: 15px;
+    padding: 10px;
+  }
+  .paiements-table .annule {
+    font-size: 15px;
+    padding: 10px 20px;
+  }
+  .paiements-table .pret {
+    font-size: 15px;
+    padding: 10px 30px;
+  }
+  .paiements-table table thead tr th {
+    font-size: 16px;
+  }
+  .paiements-table table tbody tr td {
+    font-size: 17px;
+  }
+  .paiements-navigate button {
+    padding: 15px 20px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .paiements {
+    width: 90%;
+  }
+  .paiements-search input {
+    width: 79%;
+  }
+  .paiements-table .paye,
+  .paiements-table .attente,
+  .paiements-table .annule,
+  .paiements-table .pret {
+    font-size: 16px;
+  }
+  .paiements-table table thead tr th {
+    font-size: 18px;
+  }
+  .paiements-table table tbody tr td {
+    font-size: 20px;
+  }
+  .paiements-navigate button {
+    padding: 15px 20px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .paiements {
+    width: 85%;
+  }
+  .paiements-search input {
+    width: 80%;
+  }
+  .paiements-search select {
+    width: 17%;
+  }
+}
+.attestation {
+  margin-top: 30px;
+  width: 100%;
+}
+.attestation h1 {
+  font-size: 24px;
+  font-weight: 400;
+  color: #094067;
+  margin-bottom: 30px;
+  margin-left: 10px;
+}
+.attestation h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #094067;
+  line-height: 40px;
+}
+.attestation p {
+  font-size: 14px;
+  font-weight: 500;
+  color: #8195a4;
+  letter-spacing: 0.03rem;
+}
+.attestation button {
+  border: none;
+  border-radius: 10px;
+  background: #d8eefe;
+  font-size: 16px;
+  font-weight: 300;
+  color: #094067;
+  padding: 7px 25px;
+}
+.attestation button:hover {
+  background: #3da9fc;
+}
+.attestation .certificat {
+  margin: 0 auto;
+  width: 300px;
+  max-width: 350px;
+  background: white;
+  border-radius: 20px;
+  padding: 20px;
+}
+.attestation .default {
+  display: none;
+}
+.attestation-current {
+  margin-bottom: 50px;
+}
+.attestation-coming {
+  margin-bottom: 50px;
+}
+.attestation-coming_list .certificat {
+  background: #ededed;
+}
+.attestation-coming_list .certificat h2 {
+  color: #8d8d8d;
+}
+.attestation-coming_list .certificat p {
+  color: #a4a4a4;
+  line-height: 25px;
+  margin: 0;
+}
+
+@media screen and (min-width: 768px) {
+  .attestation-current_list, .attestation-coming_list {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .attestation {
+    width: 85%;
+  }
+  .attestation-current_list, .attestation-coming_list {
+    flex-wrap: wrap;
+  }
+}
 .emploi {
   margin: 20px 40px 250px 40px;
   color: #094067;

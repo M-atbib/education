@@ -26,6 +26,7 @@ $line-height-base: 1.6;
 }
 
 @mixin flex($direction, $justify, $align, $gap) {
+    display: flex;
     flex-direction: $direction;
     justify-content: $justify;
     align-items: $align;
@@ -62,14 +63,34 @@ $line-height-base: 1.6;
     }
 }
 
+@mixin table-buttons($bg, $color) {
+    background-color: $bg;
+    font-size: 13px;
+    color: $color;
+    border-radius: 10px;
+    border: none;
+}
+
 @mixin media-sm {
     @media screen and (max-width: 768px) {
         @content;
     }
 }
 
+@mixin media-md {
+    @media screen and (min-width: 768px) {
+        @content;
+    }
+}
+
 @mixin media-lg {
     @media screen and (min-width: 900px) {
+        @content;
+    }
+}
+
+@mixin media-sp {
+    @media screen and (min-width: 1024px) {
         @content;
     }
 }

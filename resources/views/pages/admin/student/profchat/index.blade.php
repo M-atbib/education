@@ -6,49 +6,28 @@
 @section('javascript')
 <script language="javascript">
     document.addEventListener("DOMContentLoaded", () => {
-        const chatClass = document.querySelector('.groupchat_chat');
-        const courseClass = document.querySelectorAll('.groupchat_courses_list_course');
-        const coursesListClass = document.querySelector('.groupchat_courses');
-        const contactClass = document.querySelector('.groupchat_chat_head');
+        const chat = document.querySelector(".groupchat_chat");
+        const contacts = document.querySelectorAll(".groupchat_courses_list_course");
+        const head = document.querySelector(".groupchat_chat_head");
+        const smallDevice = window.matchMedia("(max-width: 900px)");
 
-        setInterval(function() {
-            if (window.innerWidth < 900) {
-                chatClass.setAttribute('id', 'chat');
-                coursesListClass.setAttribute('id', 'course-list');
-                contactClass.setAttribute('id', 'contact');
-                courseClass.forEach((course) => {
-                    course.classList.add("course");
-                })
+        smallDevice.addEventListener("change", handleDeviceChange);
+        handleDeviceChange(smallDevice);
 
-                chatId = document.getElementById('chat');
-                coursesListId = document.getElementById('course-list');
-                contactId = document.getElementById('contact');
-                courseId = document.querySelectorAll('.course');
+        function handleDeviceChange(e) {
+            if (e.matches) chat.classList.add("groupchat_chat--mobile");
+            else chat.classList.remove("groupchat_chat--mobile");
+        }
 
-                courseId.forEach((course) => {
-                    course.addEventListener('click', () => {
-                        chatId.style.display = 'flex';
-                        coursesListId.style.display = 'none';
-                    });
-                })
+        contacts.forEach((contact) => {
+            contact.addEventListener("click", () => {
+                chat.classList.add("groupchat_chat--show");
+            });
+        })
 
-                contactId.addEventListener('click', () => {
-                    chatId.style.display = 'none';
-                    coursesListId.style.display = 'block';
-                })
-
-            } else if (window.innerWidth >= 900) {
-                chatId.style.display = 'block';
-                coursesListId.style.display = 'block';
-
-                chatClass.removeAttribute('id');
-                coursesListClass.removeAttribute('id');
-                contactClass.removeAttribute('id');
-                courseClass.forEach((course) => {
-                    course.classList.remove('course');
-                })
-            }
-        }, 300);
+        head.addEventListener("click", () => {
+            chat.classList.remove("groupchat_chat--show");
+        });
 
     })
 </script>
@@ -58,8 +37,8 @@
 <div class="groupchat container-sm">
     <div class="groupchat_chat">
         <div class="groupchat_chat_head">
-            <i class="fa-solid fa-angle-left"></i>
             <div class="groupchat_chat_head_left">
+                <i class="fa-solid fa-angle-left"></i>
                 <img src="http://127.0.0.1:8000/uploads/student/man.png" alt="course" />
                 <h2>Weld nass</h2>
             </div>

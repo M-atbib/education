@@ -12,10 +12,10 @@
     }
 
     &_chat {
-        display: none;
+        $self: &;
         @include flex(column, space-between, center, 0px);
         width: 95%;
-        height: 500px;
+        height: 510px;
         margin: 20px auto;
         background: white;
         border-radius: 20px;
@@ -28,15 +28,15 @@
             border-radius: 10px;
             padding: 7px;
 
-            .fa-solid {
-                font-size: 20px;
-            }
-
             &_left {
                 @include display(flex, row, center, center, 10px);
 
                 h2 {
                     @include font(15px, 800, $blue);
+                }
+
+                .fa-solid {
+                    font-size: 20px;
                 }
             }
 
@@ -149,10 +149,24 @@
                 }
             }
         }
+
+        &--mobile {
+            position: absolute;
+            top: 150px;
+            left: 9px;
+            z-index: 1;
+            display: none;
+
+            &#{$self}--show {
+                display: block;
+                border-radius: 20px;
+            }
+        }
     }
 
     &_courses {
         width: 95%;
+        height: 500px;
         margin: 20px auto;
         background: white;
         padding: 15px;
