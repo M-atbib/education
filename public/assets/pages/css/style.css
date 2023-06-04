@@ -3779,9 +3779,9 @@
     width: 79%;
   }
   .paiements-table .paye,
-  .paiements-table .attente,
-  .paiements-table .annule,
-  .paiements-table .pret {
+.paiements-table .attente,
+.paiements-table .annule,
+.paiements-table .pret {
     font-size: 16px;
   }
   .paiements-table table thead tr th {
