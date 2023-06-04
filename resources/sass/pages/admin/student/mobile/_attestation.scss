@@ -1,6 +1,5 @@
 .attestation {
     margin-top: 30px;
-    width: 100%;
 
     h1 {
         @include font(24px, 400, $blue);
@@ -31,7 +30,6 @@
     }
 
     .certificat {
-        margin: 0 auto;
         width: 300px;
         max-width: 350px;
         background: $body-bg;
@@ -45,11 +43,17 @@
 
     &-current {
         margin-bottom: 50px;
+        &_list {
+            @include display(flex, row, center, center, 20px);
+            flex-wrap: wrap;
+        }
     }
 
     &-coming {
         margin-bottom: 50px;
         &_list {
+            @include display(flex, row, center, center, 20px);
+            flex-wrap: wrap;
             .certificat {
                 background: #ededed;
                 h2 {
@@ -67,22 +71,12 @@
 
 @include media-md {
     .attestation {
+        width: 90%;
+        margin: 30px auto;
         &-current,
         &-coming {
             &_list {
-                @include flex(row, flex-start, flex-start, 30px);
-            }
-        }
-    }
-}
-
-@include media-xl {
-    .attestation {
-        width: 85%;
-        &-current,
-        &-coming {
-            &_list {
-                flex-wrap: wrap;
+                justify-content: flex-start;
             }
         }
     }
