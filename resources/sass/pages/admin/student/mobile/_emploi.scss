@@ -65,6 +65,8 @@
 
 @include media-lg {
     .emploi {
+        width: 95%;
+        margin: 30px auto 250px auto;
         &_content {
             justify-content: flex-start;
         }

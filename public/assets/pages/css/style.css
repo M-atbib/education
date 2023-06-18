@@ -3957,8 +3957,449 @@
 }
 
 @media screen and (min-width: 900px) {
+  .emploi {
+    width: 95%;
+    margin: 30px auto 250px auto;
+  }
   .emploi_content {
     justify-content: flex-start;
+  }
+}
+.formations-plan {
+  user-select: none;
+}
+.formations-plan h1,
+.formations-plan h2 {
+  color: #094067;
+  margin-bottom: 0;
+}
+.formations-plan p {
+  margin-bottom: 0;
+}
+.formations-plan_plans {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+  background: white;
+  border-radius: 15px;
+  margin: 30px auto 50px auto;
+  padding: 25px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.formations-plan_plans-list {
+  width: 100%;
+}
+.formations-plan_plans-list_items {
+  display: flex;
+  height: 350px;
+  overflow-y: scroll;
+  flex-direction: column-reverse;
+}
+.formations-plan_plans-list_items .item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  background: #f5f5f5;
+  padding: 10px;
+  border-radius: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.formations-plan_plans-list_items .item .left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+.formations-plan_plans-list_items .item i {
+  color: #d6d6d6;
+}
+.formations-plan_plans-list_items .item h2 {
+  font-size: 16px;
+}
+.formations-plan_plans-list_items .item p {
+  color: #a9a9a9;
+  font-size: 13px;
+}
+.formations-plan_plans-list_add {
+  margin-top: 10px;
+}
+.formations-plan_plans-list_add input {
+  border: none;
+  background: #f5f5f5;
+  padding: 10px 15px;
+  border-radius: 10px;
+  width: 70%;
+}
+.formations-plan_plans-list_add button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  background: #d8eefe;
+  color: #094067;
+  font-weight: 600;
+  margin-left: 13px;
+}
+.formations-plan_groups {
+  background: white;
+  border-radius: 15px;
+  padding: 25px;
+  margin: 30px auto 50px auto;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.formations-plan_groups h1 {
+  margin-bottom: 25px;
+}
+.formations-plan_groups-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 400px;
+  overflow-y: scroll;
+}
+.formations-plan_groups-list_item {
+  background: #f5f5f5;
+  border-radius: 15px;
+  width: 48%;
+  padding: 15px;
+  text-decoration: none;
+}
+.formations-plan_groups-list_item .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 15px;
+}
+.formations-plan_groups-list_item .title h2 {
+  font-size: 20px;
+  font-weight: 600;
+}
+.formations-plan_groups-list_item .title i {
+  color: #094067;
+}
+.formations-plan_groups-list_item .profiles {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin-left: 15px;
+}
+.formations-plan_groups-list_item .profiles img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  margin-left: -15px;
+  border: 1px solid white;
+}
+.formations-plan_groups-list_item .profiles-more {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: #e7e7e7;
+  margin-left: -15px;
+  border: 1px solid white;
+  color: #5f6c7b;
+}
+.formations-class {
+  user-select: none;
+  position: relative;
+}
+.formations-class_students {
+  background: white;
+  margin: 30px auto 50px auto;
+  padding: 25px;
+  border-radius: 20px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.formations-class_students .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+.formations-class_students .title h1 {
+  color: #094067;
+}
+.formations-class_students .title p {
+  color: #a8a8a8;
+  cursor: pointer;
+}
+.formations-class_students h2 {
+  color: #094067;
+  font-weight: 300;
+  font-size: 18px;
+  margin: 20px 0 15px 0;
+}
+.formations-class_students .list {
+  height: 350px;
+  overflow-y: scroll;
+}
+.formations-class_students .list-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+.formations-class_students .list-item img {
+  width: 40px;
+  border-radius: 50%;
+}
+.formations-class_students .list-item p {
+  color: #094067;
+  font-weight: 500;
+  margin: 0;
+}
+.formations-class_popup {
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 94%;
+  background: #4c80a5;
+  padding: 20px;
+  border-radius: 20px;
+}
+.formations-class_popup .fa-xmark {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0;
+  font-size: 24px;
+  color: #094067;
+}
+.formations-class_popup .body h1 {
+  color: #d8eefe;
+  margin-bottom: 20px;
+}
+.formations-class_popup .body form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  color: #d8eefe;
+}
+.formations-class_popup .body form label input {
+  outline: none;
+  width: 100%;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 10px;
+  color: #5f6c7b;
+}
+.formations-class_popup .body form button {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  margin: 25px auto 15px auto;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 15px;
+  background: #094067;
+  color: #d8eefe;
+  font-weight: 600;
+  letter-spacing: 0.03rem;
+}
+.formations-class_courses {
+  height: 500px;
+  overflow-y: scroll;
+  margin: 30px auto 50px auto;
+}
+.formations-class_courses-course {
+  margin-bottom: 20px;
+}
+.formations-class_courses-course i {
+  border: 2px solid #094067;
+  border-radius: 50%;
+  font-size: 12px;
+  color: #094067;
+  padding: 2px;
+  cursor: pointer;
+}
+.formations-class_courses-course .title {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background: white;
+  padding: 10px 15px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.formations-class_courses-course .title h2 {
+  color: #094067;
+  font-size: 16px;
+  margin: 0;
+}
+.formations-class_courses-course .items {
+  display: none;
+  list-style-type: none;
+  background: #d8eefe;
+  padding: 15px 40px;
+  margin-top: -5px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+.formations-class_courses-course .items li {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+  color: #094067;
+}
+.formations-class_courses-course .items li p {
+  margin: 0;
+  text-decoration: underline;
+}
+
+@media screen and (min-width: 768px) {
+  .formations-plan_plans-list_add input {
+    width: 84%;
+  }
+  .formations-plan_plans-list_add button {
+    padding: 10px 15px;
+  }
+  .formations-plan_groups-list_item {
+    width: 32%;
+  }
+  .formations-class_students h2 {
+    font-size: 20px;
+  }
+  .formations-class_students .list-item p {
+    font-size: 18px;
+  }
+  .formations-class_popup {
+    width: 60%;
+    top: 20px;
+    left: 21%;
+    padding: 25px;
+  }
+  .formations-class_popup .body h1 {
+    font-size: 30px;
+  }
+  .formations-class_popup .body form label {
+    gap: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .formations-class_popup .body form label input {
+    width: 100%;
+    padding: 10px 20px;
+  }
+  .formations-class_popup .body form button {
+    font-size: 18px;
+  }
+  .formations-class_courses-course .title {
+    padding: 10px 20px;
+  }
+  .formations-class_courses-course .title h2 {
+    font-size: 18px;
+  }
+  .formations-class_courses-course .title i {
+    font-size: 14px;
+  }
+  .formations-class_courses-course .items li {
+    font-size: 17px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .formations-plan {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .formations-plan_plans {
+    width: 50%;
+  }
+  .formations-plan_plans-list_add input {
+    width: 68%;
+  }
+  .formations-plan_plans-list_add button {
+    padding: 10px 15px;
+  }
+  .formations-plan_groups {
+    width: 50%;
+  }
+  .formations-plan_groups-list_item {
+    width: 48%;
+  }
+  .formations-class {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    width: 95%;
+    margin: 0 auto;
+  }
+  .formations-class_students {
+    width: 50%;
+  }
+  .formations-class_students h2 {
+    font-size: 22px;
+  }
+  .formations-class_students .list-item {
+    gap: 15px;
+  }
+  .formations-class_students .list-item p {
+    font-size: 20px;
+  }
+  .formations-class_courses {
+    width: 50%;
+  }
+  .formations-class_courses-course .title {
+    padding: 10px 30px;
+  }
+  .formations-class_courses-course .title h2 {
+    font-size: 20px;
+  }
+  .formations-class_courses-course .items {
+    padding: 15px 50px;
+  }
+  .formations-class_courses-course .items li {
+    font-size: 18px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .formations-plan_plans-list_add input {
+    width: 75%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .formations-plan_plans-list_add input {
+    width: 80%;
   }
 }
 .login {

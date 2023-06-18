@@ -1,0 +1,64 @@
+@extends('pages.admin.layouts._master')
+
+
+@section('title','Mes Formations')
+
+
+@section('content')
+<div class="apprentissage_main container-sm">
+    <div class="apprentissage_main-course">
+        <a class="apprentissage_main-course_link" href="{{ route('mesformations.plan') }}">
+            <div class="apprentissage_main-course_link-title">
+                <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
+                <div>
+                    <h3>Pratique de l'oral</h3>
+                    <p>Progress: 2/22 classes</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <div class="progress apprentissage_detail-decription_progress" style="height:3px">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            </div>
+        </div>
+    </div>
+
+    <div class="apprentissage_main-course">
+        <a class="apprentissage_main-course_link" href="{{ route('mesformations.plan') }}">
+            <div class="apprentissage_main-course_link-title">
+                <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
+                <div>
+                    <h3>Pratique de l'oral</h3>
+                    <p>Progress: 2/22 classes</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <div class="progress apprentissage_detail-decription_progress" style="height:3px">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            </div>
+        </div>
+    </div>
+
+    <div class="apprentissage_main-course">
+        <a class="apprentissage_main-course_link" href="{{ route('mesformations.plan') }}">
+            <div class="apprentissage_main-course_link-title">
+                <img src="http://127.0.0.1:8000/uploads/student/img.png" alt="course" />
+                <div>
+                    <h3>Pratique de l'oral</h3>
+                    <p>Progress: 2/22 classes</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-angle-right"></i>
+        </a>
+
+        <div class="progress apprentissage_detail-decription_progress" style="height:3px">
+            <div class="progress-bar bg-danger" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+            </div>
+        </div>
+    </div>
+
+</div>
+@endsection
