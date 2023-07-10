@@ -3973,6 +3973,9 @@
   color: #094067;
   margin-bottom: 0;
 }
+.formations-plan h1 {
+  font-size: 26px;
+}
 .formations-plan p {
   margin-bottom: 0;
 }
@@ -3993,9 +3996,12 @@
 }
 .formations-plan_plans-list_items {
   display: flex;
-  height: 350px;
+  height: 400px;
   overflow-y: scroll;
   flex-direction: column-reverse;
+}
+.formations-plan_plans-list_items::-webkit-scrollbar {
+  display: none;
 }
 .formations-plan_plans-list_items .item {
   display: flex;
@@ -4051,6 +4057,7 @@
   padding: 25px;
   margin: 30px auto 50px auto;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  height: 555px;
 }
 .formations-plan_groups h1 {
   margin-bottom: 25px;
@@ -4063,8 +4070,7 @@
   gap: 10px;
   flex-wrap: wrap;
   width: 100%;
-  height: 400px;
-  overflow-y: scroll;
+  height: fit-content;
 }
 .formations-plan_groups-list_item {
   background: #f5f5f5;
@@ -4117,10 +4123,17 @@
   margin-left: -15px;
   border: 1px solid white;
   color: #5f6c7b;
+  font-size: 12px;
 }
 .formations-class {
   user-select: none;
   position: relative;
+}
+.formations-class h1 {
+  font-size: 26px;
+}
+.formations-class p {
+  margin-bottom: 0;
 }
 .formations-class_students {
   background: white;
@@ -4150,8 +4163,11 @@
   margin: 20px 0 15px 0;
 }
 .formations-class_students .list {
-  height: 350px;
+  height: 400px;
   overflow-y: scroll;
+}
+.formations-class_students .list::-webkit-scrollbar {
+  display: none;
 }
 .formations-class_students .list-item {
   display: flex;
@@ -4226,9 +4242,12 @@
   letter-spacing: 0.03rem;
 }
 .formations-class_courses {
-  height: 500px;
+  height: 550px;
   overflow-y: scroll;
   margin: 30px auto 50px auto;
+}
+.formations-class_courses::-webkit-scrollbar {
+  display: none;
 }
 .formations-class_courses-course {
   margin-bottom: 20px;
@@ -4364,6 +4383,9 @@
     width: 95%;
     margin: 0 auto;
   }
+  .formations-class h1 {
+    font-size: 28px;
+  }
   .formations-class_students {
     width: 50%;
   }
@@ -4374,7 +4396,7 @@
     gap: 15px;
   }
   .formations-class_students .list-item p {
-    font-size: 20px;
+    font-size: 18px;
   }
   .formations-class_courses {
     width: 50%;
@@ -4383,7 +4405,7 @@
     padding: 10px 30px;
   }
   .formations-class_courses-course .title h2 {
-    font-size: 20px;
+    font-size: 18px;
   }
   .formations-class_courses-course .items {
     padding: 15px 50px;
